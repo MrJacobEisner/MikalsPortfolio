@@ -46,30 +46,3 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
-
-.typewriter h1 {
-    overflow: hidden;
-    border-right: .15em solid rgb(122, 122, 118); 
-    white-space: nowrap; 
-    margin: 0 auto; 
-    letter-spacing: .08em; 
-    animation: 
-      typing 3.5s steps(25, end),
-      blink-caret .75s step-end infinite;
-  }
-  
-//   .typewriter {
-//     max-height: fit-content;
-//   }
-  
-  @keyframes typing {
-    from { width: 0 }
-    // to { width: 100% }
-    to { width: inherit }
-  }
-  
-  
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: rgb(122, 122, 118); }
-  }

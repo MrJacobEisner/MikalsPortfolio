@@ -1,15 +1,15 @@
-import React from "react";
-import "./typewriter.scss";
+import "../../globals.ts";
+import "./Typewriter.scss";
 
 interface properties {
     children: React.ReactNode;
 }
 
-function typewriter(props: properties) {
+function Typewriter(props: properties) {
     return (
         <div className="typewriter">
             <h1>{props.children}</h1>
         </div>
     );
 }
-export default typewriter;
+export default Typewriter;
