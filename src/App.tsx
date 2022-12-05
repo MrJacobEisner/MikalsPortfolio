@@ -1,29 +1,12 @@
 import "./globals.ts";
 // import logo from './logo.svg';
 import "./App.scss";
-import Typewriter from "./components/typewriter/Typewriter";
+// import Typewriter from "./components/typewriter/Typewriter";
 
 function App() {
     return (
         <div className="App">
-            <div className="introdution">
-                <div className="typing-wrapper">
-                    <Typewriter>Mikal Kotadia</Typewriter>
-                </div>
-                <p className="intro-p">
-                    Hey! I'm Mikal, a third year honors computing science
-                    student at the University of Alberta! I love coding and
-                    discovering new tech!
-                </p>
-            </div>
-
-            <div className="skills"></div>
-
-            <div className="projects"></div>
-
-            <div className="experience"></div>
-
-            {/* <p>This is the first test in my portfolio site!</p> */}
+            <div className="shadow p-3 mb-5 bg-white rounded"></div>
         </div>
     );
 }
