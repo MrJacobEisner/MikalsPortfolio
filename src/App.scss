@@ -1,12 +1,15 @@
 @import "~bootstrap/scss/bootstrap"; 
+@import "Animations.scss";
+
+@font-face {
+    font-family: 'LeagueSpartan';
+    src: local('LeagueSpartan'), url('../public/LeagueSpartan-Bold.otf') format('opentype');
+  }
 
 .App {
     text-align: center;
-    display: grid;
     height: inherit;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 30;
+    background-color: rgba(33, 33, 33, 1);
 }
 
 .App-logo {
@@ -14,48 +17,44 @@
     pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+.nav-bar {
+    // font-family: 'LeagueSpartan';
+    resize: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 90% 10%;
+    background-color: rgba(41, 41, 41, 1);
+    align-items: center;
+    justify-items: center;
+    min-height: 75px;
+    height: 10%;
 }
 
-// .App-header {
-//     background-color: #282c34;
-//     min-height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     font-size: calc(10px + 2vmin);
-//     color: white;
-// }
-
-.App-link {
-    color: #61dafb;
+.nav-items {
+    font-family: "LeagueSpartan";
+    grid-row: 1;
+    margin-bottom: 0;
+    color: white;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+.logo {
+    grid-column: 1;
+    grid-row: 1;
 }
 
-.introdution {
-    // display: grid;
-    border-radius: 15px;
-    margin-left: 20px;
+.dot {
+    height: 5px;
+    width: 20px;
+    background-color: #bbb;
+    border-radius: 30%;
+    display: inline-block;
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+  }
+
+  .tester {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     background-color: blue;
-    p {
-        padding: 0;
-        height: fit-content;
-        // margin: 0;
-        margin-top: 5%;
-        margin-left: 10%;
-        margin-right: 2%;
-        margin-bottom: 2%;
-    }
-}
+  }
