@@ -1,9 +1,11 @@
+// @import "~bootstrap/scss/bootstrap"; 
+
 .App {
     text-align: center;
     display: grid;
     height: inherit;
-    // grid-template-columns: 1fr 1fr 1fr;
-    // grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-rows: 30;
 }
 
@@ -43,6 +45,17 @@
 }
 
 .introdution {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    // display: grid;
+    border-radius: 15px;
+    margin-left: 20px;
+    background-color: blue;
+    p {
+        padding: 0;
+        height: fit-content;
+        // margin: 0;
+        margin-top: 5%;
+        margin-left: 10%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+    }
 }

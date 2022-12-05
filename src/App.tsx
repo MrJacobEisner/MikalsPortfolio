@@ -7,7 +7,14 @@ function App() {
     return (
         <div className="App">
             <div className="introdution">
-                <Typewriter>Mikal Kotadia</Typewriter>
+                <div className="typing-wrapper">
+                    <Typewriter>Mikal Kotadia</Typewriter>
+                </div>
+                <p className="intro-p">
+                    Hey! I'm Mikal, a third year honors computing science
+                    student at the University of Alberta! I love coding and
+                    discovering new tech!
+                </p>
             </div>
 
             <div className="skills"></div>
