@@ -1,6 +1,9 @@
 @import "~bootstrap/scss/bootstrap"; 
 @import "Animations.scss";
 
+$font-grey: rgb(213, 213, 213);
+
+
 @font-face {
     font-family: 'LeagueSpartan';
     src: local('LeagueSpartan'), url('../public/LeagueSpartan-Bold.otf') format('opentype');
@@ -30,22 +33,25 @@
     height: 10%;
 }
 
-.nav-items {
+.nav-item {
     font-family: "LeagueSpartan";
+    color: $font-grey;
     grid-row: 1;
+}
+
+.nav-text {
     margin-bottom: 0;
-    color: white;
 }
 
 .logo {
     grid-column: 1;
-    grid-row: 1;
+    fill: $font-grey;
 }
 
 .dot {
     height: 5px;
     width: 20px;
-    background-color: #bbb;
+    background-color: $font-grey;
     border-radius: 30%;
     display: inline-block;
     grid-column: 2;
