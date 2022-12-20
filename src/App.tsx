@@ -1,4 +1,5 @@
-import { ReactComponent as Logo } from "./logo.svg";
+import { ReactComponent as Logo } from "./images/logo.svg";
+import githubLogo from "./images/github-logo.png";
 import "./globals.ts";
 import "./App.scss";
 // import variables from "./variables.module.scss";
@@ -12,20 +13,20 @@ function App() {
 
     return (
         <div className="App">
-            <div className="nav-bar shadow-lg mb-5 p-3">
+            <div className="nav-bar">
                 <Logo className="logo" />
-                <div className="nav-item white-highlight" onClick={() => animations.moveIndicator(1)}>
+                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(1)}>
                     About
-                </div>
-                <div className="nav-item white-highlight" onClick={() => animations.moveIndicator(2)}>
+                </a>
+                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(2)}>
                     Experience
-                </div>
-                <div className="nav-item white-highlight" onClick={() => animations.moveIndicator(3)}>
+                </a>
+                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(3)}>
                     Resumé
-                </div>
-                <div className="nav-item white-highlight" onClick={() => animations.moveIndicator(4)}>
+                </a>
+                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(4)}>
                     Contact
-                </div>
+                </a>
                 <hr id="indicator" className="nav-item white-highlight"></hr>
             </div>
             <main id="mainBody">
@@ -39,6 +40,8 @@ function App() {
                     programming, I love listening to music, gaming, and working out.
                 </p>
             </main>
+            <footer></footer>
+            {/* <img src={githubLogo} alt="gihub" className="github-logo" /> */}
         </div>
     );
 }

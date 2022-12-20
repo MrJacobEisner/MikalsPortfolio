@@ -21,7 +21,7 @@ export function changeText() {
         [`echo '<p>`, `</p>';`],
         [`print("`, `")`],
         [`MsgBox("`, `")`],
-        [`echo `, ``],
+        [`echo`, ``],
     ];
     let greeting_num: number = Math.floor(Math.random() * greetings.length);
     let greeting: string[] = greetings[greeting_num];
