@@ -1,6 +1,7 @@
-import "./globals.ts";
 import { ReactComponent as Logo } from "./logo.svg";
+import "./globals.ts";
 import "./App.scss";
+// import variables from "./variables.module.scss";
 import * as animations from "./animations";
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
 
     return (
         <div className="App">
-            <div className="nav-bar p-3">
+            <div className="nav-bar shadow-lg mb-5 p-3">
                 <Logo className="logo" />
                 <div className="nav-item white-highlight" onClick={() => animations.moveIndicator(1)}>
                     About
@@ -27,7 +28,6 @@ function App() {
                 </div>
                 <hr id="indicator" className="nav-item white-highlight"></hr>
             </div>
-            {/* <div id="mainBody"> */}
             <main id="mainBody">
                 <div className="greeting">
                     <span id="beginingGreeting"></span>
@@ -35,10 +35,10 @@ function App() {
                     <span id="endingGreeting"></span>
                 </div>
                 <p className="intro-p">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto omnis magnam tempora delectus dolore harum, quisquam fuga repellat aperiam veritatis quam non quasi, modi, reiciendis dicta? Neque temporibus ex tempora?
+                    I am an honours CS student at the University of Alberta with a passion for any and all technology. Besides
+                    programming, I love listening to music, gaming, and working out.
                 </p>
             </main>
-            {/* </div> */}
         </div>
     );
 }
