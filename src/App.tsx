@@ -4,6 +4,11 @@ import "./App.scss";
 import * as animations from "./animations";
 
 function App() {
+    // changing the text of my thing
+    setInterval(() => {
+        animations.changeText();
+    }, 3000);
+
     return (
         <div className="App">
             <div className="nav-bar shadow p-3 mb-5 w-100">
@@ -22,14 +27,13 @@ function App() {
                 </div>
                 <hr id="indicator" className="nav-item white-highlight"></hr>
             </div>
-            {/* <div className="tester">this is some data</div> */}
             <div id="mainBody">
-                {/* <div className="greeting">console.log("Hi! I'm Mikal")</div> */}
                 <div className="greeting">
-                    <span id="beginingGreeting">{`std::cout << "`}</span>
-                    {/* <span id="beginingGreeting">{`echo `}</span> */}
+                    {/* <span id="beginingGreeting">{`std::cout << "`}</span> */}
+                    <span id="beginingGreeting"></span>
                     <span style={{ color: "white" }}>Hi! I'm Mikal</span>
-                    <span id="endingGreeting">{`" << endl;`}</span>
+                    <span id="endingGreeting"></span>
+                    {/* <span id="endingGreeting">{`" << endl;`}</span> */}
                 </div>
             </div>
         </div>
