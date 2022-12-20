@@ -1,12 +1,20 @@
 import "./App.scss"
 import "./globals"
 
-export function dotExtend(){
-    let dot = document.getElementById("nav_dot")?.style;
-    dot!.gridColumn = "3";
-    // document.getElementById("nav_dot")!.style.gridColumn = "4";
-    // dot!.width ="100px";
-    // dot!.style.backgroundColor = "white";
-    // dot?.style
-    console.log("test");
+export function moveIndicator(num: number){
+    let indicator = document.getElementById("indicator");
+    let indicator_style = indicator?.style;
+    indicator_style!.opacity = "0%";
+    setTimeout(() => {
+        indicator_style!.gridColumnStart = String(num + 1);
+        indicator_style!.gridColumnEnd = String(num + 2);
+        indicator_style!.opacity = "100%";
+    }, 360)
+}
+
+export function setEndColumn(end_column: number){
+    let indicator = document.getElementById("indicator")?.style;
+    let currentColumnEnd: number = Number(indicator!.gridColumnEnd);
+    console.log(currentColumnEnd);
+    indicator!.gridColumnEnd = String(end_column);
 }

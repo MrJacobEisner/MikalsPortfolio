@@ -1,0 +1,27 @@
+@import "variables.scss";
+
+.white-highlight:hover {
+    color: white;
+    fill: white;
+    transition: $hover-fade-time;
+}
+
+// .nav-item:hover {
+//     color: white;
+//     transition: $hover-fade-time;
+// }
+
+
+
+// .logo:hover {
+//     fill: white;
+//     transition: $hover-fade-time;
+//  }
+
+//  should prob nest this under above
+//  .nav-item:hover~#indicator{
+//     transition: $hover-fade-time;
+//     background-color: white;
+//     // grid-column-end: inherit;
+//     // width: 50%;
+// }
