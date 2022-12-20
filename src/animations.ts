@@ -12,9 +12,9 @@ export function moveIndicator(num: number){
     }, 360)
 }
 
-export function setEndColumn(end_column: number){
-    let indicator = document.getElementById("indicator")?.style;
-    let currentColumnEnd: number = Number(indicator!.gridColumnEnd);
-    console.log(currentColumnEnd);
-    indicator!.gridColumnEnd = String(end_column);
-}
+// export function indOnHover(column: number){
+//     let indicator = document.getElementById("indicator")?.style;
+//     let currentColumnEnd: number = Number(indicator!.gridColumnEnd);
+//     console.log(currentColumnEnd);
+//     indicator!.gridColumnEnd = String(end_column);
+// }

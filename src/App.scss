@@ -8,18 +8,35 @@
     src: local('LeagueSpartan'), url('../public/LeagueSpartan-Bold.otf') format('opentype');
   }
 
+  body {
+    color: white;
+    font-family: "LeagueSpartan";
+
+  }
+
 .App {
     text-align: center;
     height: inherit;
-    background-color: rgba(33, 33, 33, 1);
+    display: grid;
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 1;
 }
 
-// .App-logo {
-//     height: 40vmin;
-//     pointer-events: none;
-// }
+#mainBody {
+    grid-row: 2;
+    background-color: rgba(33, 33, 33, 1);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    width: 100%;
+}
+
 
 .nav-bar {
+    grid-row: 1;
+
+
+
     // font-family: 'LeagueSpartan';
     float: left;
     resize: none;
@@ -33,7 +50,8 @@
 }
 
 .nav-item {
-    font-family: "LeagueSpartan";
+    // font-family: "LeagueSpartan";
+    font-size: larger;
     cursor: pointer;
     color: $font-grey;
     grid-row: 1;
@@ -46,15 +64,14 @@
 .logo {
     grid-column: 1;
     fill: $font-grey;
+    grid-row: 1;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #indicator {
-    // $grid_end: 3;
-    // float: left;
     border: 0;
     opacity: 100%;
-    // padding-left: 45%;
-    // padding-right: 45%;
     width: 10%;
     background-color: $font-grey;
     height: 100%;
@@ -65,9 +82,28 @@
 
   }
 
-
-.tester {
+.greeting {
+    // float: none;
+    text-align: center;
+    margin-top: 20%;
+    margin-left: 10%;
+    grid-column-start: 1;
+    grid-column-end: 3;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    background-color: blue;
-  }
+    grid-template-rows: 1;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 270%;
+    color: $font-grey;
+}
+
+#endingGreeting{
+    // margin-left: 0%;
+    // padding-left: 0%;
+    text-align: left;
+}
+
+#beginingGreeting{
+    // margin-left: 0%;
+    // padding-left: 0%;
+    text-align: right;
+}
