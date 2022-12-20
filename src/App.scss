@@ -24,9 +24,10 @@
 
 #mainBody {
     grid-row: 2;
-    background-color: rgba(41, 41, 41, 1);
+    background-color: $dark-grey;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(10, 1fr);
     height: 100%;
     width: 100%;
 }
@@ -34,12 +35,13 @@
 
 .nav-bar {
     grid-row: 1;
+    padding: 30%;
     float: left;
     resize: none;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 95% 5%;
-    background-color: rgba(41, 41, 41, 1);
+    background-color: $light-grey;
     align-items: center;
     min-height: 75px;
     height: 10%;
@@ -83,21 +85,28 @@
     text-align: center;
     margin-top: 20%;
     margin-left: 10%;
+    // margin-left: auto;
     grid-column-start: 1;
     grid-column-end: 3;
     display: grid;
     grid-template-rows: 1;
     grid-template-columns: repeat(3, 1fr);
     font-size: 270%;
-    color: $font-grey;
+    color: $font-dark-grey;
 }
 
 #endingGreeting{
-    transition: opacity 0.5s;
+    transition: opacity calc($greeting-fade-time / 2);
     text-align: left;
 }
 
 #beginingGreeting{
-    transition: opacity 0.5s;
+    transition: opacity calc($greeting-fade-time / 2);
     text-align: right;
+}
+
+.intro-p {
+    grid-row: 4;
+    grid-column: 3;
+    margin-right: 10%;
 }
