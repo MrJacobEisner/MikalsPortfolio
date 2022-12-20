@@ -18,16 +18,23 @@ export function changeText() {
     const greetings = [
         [`std::cout << "`, `" << endl;`],
         [`console.log("`, `");`],
-        [`printf("`, `");`],
         [`echo '<p>`, `</p>';`],
         [`print("`, `")`],
         [`MsgBox("`, `")`],
     ];
     let greeting_num: number = Math.floor(Math.random() * greetings.length);
     let greeting: string[] = greetings[greeting_num];
-    begining_greeting!.innerText = greeting[0];
-    ending_greeting!.innerText = greeting[1];
-    // for (const greeting of greetings) {
-    // }
+
+    begining_greeting?.classList.add("fade");
+    ending_greeting?.classList.add("fade");
+    
+    setTimeout(() => {
+        begining_greeting!.innerText = greeting[0];
+        ending_greeting!.innerText = greeting[1];
+        
+        begining_greeting?.classList.remove("fade");
+        ending_greeting?.classList.remove("fade");
+
+    }, 500)
     return;
 }

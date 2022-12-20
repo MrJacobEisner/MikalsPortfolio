@@ -7,7 +7,7 @@ function App() {
     // changing the text of my thing
     setInterval(() => {
         animations.changeText();
-    }, 3000);
+    }, 5000);
 
     return (
         <div className="App">
@@ -29,11 +29,9 @@ function App() {
             </div>
             <div id="mainBody">
                 <div className="greeting">
-                    {/* <span id="beginingGreeting">{`std::cout << "`}</span> */}
                     <span id="beginingGreeting"></span>
                     <span style={{ color: "white" }}>Hi! I'm Mikal</span>
                     <span id="endingGreeting"></span>
-                    {/* <span id="endingGreeting">{`" << endl;`}</span> */}
                 </div>
             </div>
         </div>
