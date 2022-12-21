@@ -1,5 +1,7 @@
 import { ReactComponent as Logo } from "./images/logo.svg";
-import githubLogo from "./images/github-logo.png";
+// import githubLogo from "./images/github-logo.png";
+import { ReactComponent as GithubLogo } from "./images/github.svg";
+import { ReactComponent as EmailIcon } from "./images/email.svg";
 import "./globals.ts";
 import "./App.scss";
 // import variables from "./variables.module.scss";
@@ -13,6 +15,7 @@ function App() {
 
     return (
         <div className="App">
+            {/* NAV BAR */}
             <div className="nav-bar">
                 <Logo className="logo" />
                 <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(1)}>
@@ -29,6 +32,7 @@ function App() {
                 </a>
                 <hr id="indicator" className="nav-item white-highlight"></hr>
             </div>
+            {/* Body */}
             <main id="mainBody">
                 <div className="greeting">
                     <span id="beginingGreeting"></span>
@@ -40,8 +44,13 @@ function App() {
                     programming, I love listening to music, gaming, and working out.
                 </p>
             </main>
-            <footer></footer>
-            {/* <img src={githubLogo} alt="gihub" className="github-logo" /> */}
+            {/* Footer */}
+            <footer>
+                <div className="contact-info">
+                    <GithubLogo className="contact-logos" />
+                    <EmailIcon className="contact-logos" />
+                </div>
+            </footer>
         </div>
     );
 }
