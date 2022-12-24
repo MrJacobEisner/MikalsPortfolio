@@ -70,12 +70,12 @@
     .greeting {
         text-align: center;
         margin-top: 125px;
-        margin-left: 5%;
+        // margin-left: 5%;
         grid-column-start: 1;
-        grid-column-end: 3;
+        grid-column-end: 4;
         display: grid;
         grid-template-rows: 1;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 1fr 0.4fr 1fr;
         font-size: calc(11px + 2.2vw);
         color: $font-dark-grey;
         white-space: nowrap;
@@ -88,6 +88,7 @@
         #beginingGreeting{
             transition: opacity calc($greeting-fade-time / 2);
             text-align: right;
+            // min-width: max-content;
         }
     }
 

@@ -21,7 +21,7 @@ export function changeText() {
         [`echo '<p>`, `</p>';`],
         [`print("`, `")`],
         [`MsgBox("`, `")`],
-        [`echo`, ``],
+        // [`echo \ `, ``],
     ];
     let greeting_num: number = Math.floor(Math.random() * greetings.length);
     let greeting: string[] = greetings[greeting_num];
@@ -32,6 +32,8 @@ export function changeText() {
     setTimeout(() => {
         begining_greeting!.innerText = greeting[0];
         ending_greeting!.innerText = greeting[1];
+        // begining_greeting!.innerHTML = greeting[0];
+        // ending_greeting!.innerHTML = greeting[1];
         
         begining_greeting?.classList.remove("fade");
         ending_greeting?.classList.remove("fade");
