@@ -1,10 +1,9 @@
 import { ReactComponent as Logo } from "./images/logo.svg";
-// import githubLogo from "./images/github-logo.png";
 import { ReactComponent as GithubLogo } from "./images/github.svg";
 import { ReactComponent as EmailIcon } from "./images/email.svg";
+import * as helpers from "./helpers";
 import "./globals.ts";
 import "./App.scss";
-// import variables from "./variables.module.scss";
 import * as animations from "./animations";
 
 function App() {
@@ -43,12 +42,24 @@ function App() {
                     I am an honours CS student at the University of Alberta with a passion for any and all technology. Besides
                     programming, I love listening to music, gaming, and working out.
                 </p>
+
+                <p className="experience-p"></p>
             </main>
             {/* Footer */}
             <footer>
                 <div className="contact-info">
-                    <GithubLogo className="contact-logos" />
-                    <EmailIcon className="contact-logos" />
+                    <GithubLogo
+                        className="contact-logos"
+                        onClick={() => {
+                            helpers.openUrl("https://github.com/MikalKotadia");
+                        }}
+                    />
+                    <EmailIcon
+                        className="contact-logos"
+                        onClick={() => {
+                            helpers.openUrl("mailto:mikal.m.kotadia@gmail.com");
+                        }}
+                    />
                 </div>
             </footer>
         </div>

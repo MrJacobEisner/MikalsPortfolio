@@ -64,21 +64,24 @@
     background-color: $dark-grey;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: min-content repeat(4, 1fr);
     width: 100vw;
 
     .greeting {
         text-align: center;
         margin-top: 125px;
-        // margin-left: 5%;
+        margin-left: 0%;
+        margin-left: 0%;
+
         grid-column-start: 1;
         grid-column-end: 4;
         display: grid;
         grid-template-rows: 1;
-        grid-template-columns: 1fr 0.4fr 1fr;
+        grid-template-columns: 1fr 0.55fr 1fr;
         font-size: calc(11px + 2.2vw);
         color: $font-dark-grey;
         white-space: nowrap;
+        height: fit-content;
     
         #endingGreeting{
             transition: opacity calc($greeting-fade-time / 2);
@@ -96,7 +99,8 @@
         grid-row: 2;
         grid-column-start: 2;
         grid-column-end: 4;
-        font-size: larger;
+        // font-size: larger;
+        font-size: calc(11px + 0.5vw);;
         width: 50%;
         margin-top: 75px;
         margin-left: 25%;
@@ -122,7 +126,9 @@ footer {
             margin-left: 30px;
             height: 65px;
             width: 65px;
+            cursor: pointer;
             fill: $font-grey;
+            
         }
     }
 }
