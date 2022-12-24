@@ -76,7 +76,7 @@
         display: grid;
         grid-template-rows: 1;
         grid-template-columns: repeat(3, 1fr);
-        font-size: 45px;
+        font-size: calc(11px + 2.2vw);
         color: $font-dark-grey;
         white-space: nowrap;
     
