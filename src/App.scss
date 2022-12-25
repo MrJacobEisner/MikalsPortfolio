@@ -12,6 +12,14 @@
     overflow-x: scroll;
 }
 
+h1 {
+    font-size: $large-font;
+}
+
+h2 {
+    font-size: $medium-font;
+}
+
 .nav-bar {
     height: 75px;
     padding: 0;
@@ -26,7 +34,7 @@
     justify-content: center;
     
     .nav-item {
-        font-size: $medium-font;
+        font-size: $item-font;
         cursor: pointer;
         color: $font-grey;
         grid-row: 1;
@@ -66,44 +74,52 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: min-content repeat(8, 1fr);
     width: 100vw;
-
-    .greeting {
-        text-align: center;
-        margin-top: 125px;
-        margin-left: 0%;
-        margin-left: 0%;
-
-        grid-column-start: 1;
-        grid-column-end: 4;
+    .about {
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column: span 3;
         display: grid;
-        grid-template-rows: 1;
-        grid-template-columns: 1fr 0.55fr 1fr;
-        font-size: $large-font;
-        color: $font-dark-grey;
-        white-space: nowrap;
-        height: fit-content;
-    
-        #endingGreeting{
-            transition: opacity calc($greeting-fade-time / 2);
-            text-align: left;
-        }
-        
-        #beginingGreeting{
-            transition: opacity calc($greeting-fade-time / 2);
-            text-align: right;
-            // min-width: max-content;
-        }
-    }
+        grid-template-columns: inherit;
+        grid-template-rows: 2;
+        margin-bottom: 10%;
 
-    .intro-p {
-        grid-row: 2;
-        grid-column-start: 2;
-        grid-column-end: 4;
-        // font-size: larger;
-        font-size: $small-font;
-        width: 50%;
-        margin-top: 75px;
-        margin-left: 25%;
+        .greeting {
+            text-align: center;
+            margin-top: 125px;
+            margin-left: 0%;
+            margin-left: 0%;
+    
+            grid-column-start: 1;
+            grid-column-end: 4;
+            display: grid;
+            grid-template-rows: 1;
+            grid-template-columns: 1fr 0.55fr 1fr;
+            // font-size: $large-font;
+            color: $font-dark-grey;
+            white-space: nowrap;
+            height: fit-content;
+        
+            #endingGreeting{
+                transition: opacity calc($greeting-fade-time / 2);
+                text-align: left;
+            }
+            
+            #beginingGreeting{
+                transition: opacity calc($greeting-fade-time / 2);
+                text-align: right;
+                // min-width: max-content;
+            }
+        }
+    
+        .intro-p {
+            grid-row: 2;
+            grid-column-start: 2;
+            grid-column-end: 4;
+            font-size: $small-font;
+            width: 50%;
+            margin-top: 10%;
+            margin-left: 25%;
+        }
     }
 
     .experience {
@@ -114,9 +130,12 @@
 
         display: grid;
         grid-template-columns: 3;
+        grid-template-rows: min-content auto;
+        margin: 0% 5% 0% 5%;
         h1 {
-            margin-top: 10%;
-            font-size: $large-font;
+            grid-row: 1;
+            height: min-content;
+            // font-size: $large-font;
         }
     }
 }

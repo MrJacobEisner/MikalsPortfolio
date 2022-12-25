@@ -1,6 +1,8 @@
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as GithubLogo } from "./images/github.svg";
 import { ReactComponent as EmailIcon } from "./images/email.svg";
+import tnm_bck from "./images/tnm.png";
+import Card from "./components/Card";
 import * as helpers from "./helpers";
 import "./globals.ts";
 import "./App.scss";
@@ -33,18 +35,21 @@ function App() {
             </div>
             {/* Body */}
             <main id="mainBody">
-                <div className="greeting">
-                    <span id="beginingGreeting"></span>
-                    <span style={{ color: "white" }}>Hi! I'm Mikal</span>
-                    <span id="endingGreeting"></span>
+                <div className="about">
+                    <div className="greeting">
+                        <h1 id="beginingGreeting"></h1>
+                        <h1 style={{ color: "white" }}>Hi! I'm Mikal</h1>
+                        <h1 id="endingGreeting"></h1>
+                    </div>
+                    <p className="intro-p">
+                        I am an honours CS student at the University of Alberta with a passion for any and all technology. Besides
+                        programming, I love listening to music, gaming, and working out.
+                    </p>
                 </div>
-                <p className="intro-p">
-                    I am an honours CS student at the University of Alberta with a passion for any and all technology. Besides
-                    programming, I love listening to music, gaming, and working out.
-                </p>
 
                 <div className="experience">
                     <h1>Experience</h1>
+                    <Card backgroundImage={tnm_bck} heading="True North Mortgage" subHeading="Software developer" />
                 </div>
             </main>
             {/* Footer */}

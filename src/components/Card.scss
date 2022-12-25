@@ -1,0 +1,41 @@
+//locations
+$tnm-bck: "../images/tnm.png";
+
+.card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0);
+    height: 35%;
+    filter: drop-shadow(16px 16px 10px rgba(140, 0, 255, 0.29));
+
+    .bck-img {
+        grid-column: span 3;
+        grid-row: span 3;
+        border-radius: 20px;
+        position: relative;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        filter: blur(2px) brightness(30%);
+    }
+    .content {
+        grid-template-columns: inherit;
+        grid-template-columns: inherit;
+        grid-row: 2;
+        position: absolute;
+        z-index: 99 !important;
+
+        h2 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            margin-left: 15%;
+            // margin-top: 15%;
+            white-space: nowrap;
+        }
+    }
+}
