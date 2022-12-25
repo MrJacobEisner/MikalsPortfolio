@@ -10,7 +10,7 @@ interface CardProperties {
 }
 
 export default function Card(properties: CardProperties) {
-    let img: string = "url(" + "'" + properties.backgroundImage + "')";
+    let img: string = `url('${properties.backgroundImage}')`;
     let height = properties.height == null ? "35%" : properties.height;
 
     const cont_styles: React.CSSProperties = {
