@@ -43,7 +43,9 @@ function App() {
                     programming, I love listening to music, gaming, and working out.
                 </p>
 
-                <p className="experience-p"></p>
+                <div className="experience">
+                    <h1>Experience</h1>
+                </div>
             </main>
             {/* Footer */}
             <footer>
