@@ -130,13 +130,8 @@ h2 {
 
         display: grid;
         grid-template-columns: 3;
-        grid-template-rows: min-content auto;
+        grid-template-rows: min-content min-content min-content;
         margin: 0% 5% 0% 5%;
-        h1 {
-            grid-row: 1;
-            height: min-content;
-            // font-size: $large-font;
-        }
     }
 }
 

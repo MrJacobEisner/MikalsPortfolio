@@ -26,6 +26,7 @@ export default function Card(properties: CardProperties) {
             <div className="bck-img" style={img_styles} />
             <div className="content">
                 <h2>{properties.heading}</h2>
+                <p>{properties.subHeading}</p>
             </div>
         </div>
     );

@@ -2,6 +2,7 @@ import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as GithubLogo } from "./images/github.svg";
 import { ReactComponent as EmailIcon } from "./images/email.svg";
 import tnm_bck from "./images/tnm.png";
+import ualberta_bck from "./images/ualberta.jpeg";
 import Card from "./components/Card";
 import * as helpers from "./helpers";
 import "./globals.ts";
@@ -49,7 +50,16 @@ function App() {
 
                 <div className="experience">
                     <h1>Experience</h1>
-                    <Card backgroundImage={tnm_bck} heading="True North Mortgage" subHeading="Software developer" />
+                    <Card
+                        backgroundImage={tnm_bck}
+                        heading="True North Mortgage"
+                        subHeading="Student Software Developer (Summers 2022 - Present)"
+                    />
+                    <Card
+                        backgroundImage={ualberta_bck}
+                        heading="UAlberta"
+                        subHeading="Computing Science TA (January 2022 - April 2022)"
+                    />
                 </div>
             </main>
             {/* Footer */}
