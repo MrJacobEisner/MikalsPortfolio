@@ -52,19 +52,6 @@ h2 {
         margin-right: auto;
         width: 100%;
     }
-    
-    #indicator {
-        border: 0;
-        opacity: 100%;
-        width: 10%;
-        background-color: $font-grey;
-        height: 3px;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row: 2;
-        transition: calc($hover-fade-time);
-        margin-bottom: 50px;
-    }
 }
 
 #mainBody {

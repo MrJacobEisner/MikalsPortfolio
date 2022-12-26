@@ -1,16 +1,8 @@
 import "./App.scss"
 import "./globals"
 
-export function moveIndicator(num: number, id: string){
+export function navigate(id: string){
     document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
-    let indicator = document.getElementById("indicator");
-    let indicator_style = indicator?.style;
-    indicator_style!.opacity = "0%";
-    setTimeout(() => {
-        indicator_style!.gridColumnStart = String(num + 1);
-        indicator_style!.gridColumnEnd = String(num + 2);
-        indicator_style!.opacity = "100%";
-    }, 360)
 }
 
 export function changeText() {

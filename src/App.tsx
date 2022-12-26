@@ -22,19 +22,19 @@ function App() {
             {/* NAV BAR */}
             <div className="nav-bar">
                 <Logo className="logo" />
-                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(1, "about")}>
+                <a className="nav-item white-highlight" onClick={() => animations.navigate("about")}>
                     About
                 </a>
-                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(2, "experience")}>
+                <a className="nav-item white-highlight" onClick={() => animations.navigate("experience")}>
                     Experience
                 </a>
-                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(3, "")}>
+                <a className="nav-item white-highlight" onClick={() => animations.navigate("")}>
                     Resumé
                 </a>
-                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(4, "")}>
+                <a className="nav-item white-highlight" onClick={() => animations.navigate("")}>
                     Contact
                 </a>
-                <hr id="indicator" className="nav-item white-highlight"></hr>
+                {/* <hr id="indicator" className="nav-item white-highlight"></hr> */}
             </div>
             {/* Body */}
             <main id="mainBody">
