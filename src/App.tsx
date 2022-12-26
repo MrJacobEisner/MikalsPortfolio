@@ -9,6 +9,8 @@ import "./globals.ts";
 import "./App.scss";
 import * as animations from "./animations";
 
+//FIXME: nav bar indicator not moving with scroll
+
 function App() {
     // changing the text of my thing
     setInterval(() => {
@@ -20,23 +22,23 @@ function App() {
             {/* NAV BAR */}
             <div className="nav-bar">
                 <Logo className="logo" />
-                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(1)}>
+                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(1, "about")}>
                     About
                 </a>
-                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(2)}>
+                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(2, "experience")}>
                     Experience
                 </a>
-                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(3)}>
+                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(3, "")}>
                     Resumé
                 </a>
-                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(4)}>
+                <a className="nav-item white-highlight" onClick={() => animations.moveIndicator(4, "")}>
                     Contact
                 </a>
                 <hr id="indicator" className="nav-item white-highlight"></hr>
             </div>
             {/* Body */}
             <main id="mainBody">
-                <div className="about">
+                <div id="about" className="about">
                     <div className="greeting">
                         <h1 id="beginingGreeting"></h1>
                         <h1 style={{ color: "white" }}>Hi! I'm Mikal</h1>
@@ -48,7 +50,7 @@ function App() {
                     </p>
                 </div>
 
-                <div className="experience">
+                <div id="experience" className="experience">
                     <h1>Experience</h1>
                     <Card
                         backgroundImage={tnm_bck}
