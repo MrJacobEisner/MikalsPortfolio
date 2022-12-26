@@ -20,6 +20,22 @@ h2 {
     font-size: $medium-font;
 }
 
+#scroll-button {
+    transition: $hover-fade-time;
+    opacity: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 2%;
+    margin-right: 2%;
+    fill: $font-grey;
+    width: 3%;
+    border: none;
+    &:hover{
+        fill: white;
+    }
+}
+
 .nav-bar {
     height: 75px;
     padding: 0;
@@ -34,14 +50,17 @@ h2 {
     justify-content: center;
     
     .nav-item {
+        transition: $hover-fade-time;
         font-size: $item-font;
-        cursor: pointer;
         color: $font-grey;
         grid-row: 1;
-        transition: $hover-fade-time;
         margin-left: auto;
         margin-right: auto;
         text-decoration: none;
+
+        &:hover {
+            color: white;
+        }
     }
     
     .logo {
@@ -137,12 +156,16 @@ footer {
         grid-column: 2;
     
         .contact-logos {
+            transition: $hover-fade-time;
+            fill: $font-grey;
             margin-top: 10px;
             margin-left: 30px;
             height: 65px;
             width: 65px;
-            cursor: pointer;
-            fill: $font-grey;
+
+            &:hover {
+                fill: white;
+            }
             
         }
     }
