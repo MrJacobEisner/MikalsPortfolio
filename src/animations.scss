@@ -1,11 +1,9 @@
 @import "variables.scss";
 
-.white-highlight:hover {
-    color: white;
-    // fill: white;
-    transition: $hover-fade-time;
-}
-
 .fade {
     opacity: 0 !important;
+}
+
+.clickable {
+    cursor: pointer;
 }
