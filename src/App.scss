@@ -119,12 +119,14 @@ h2 {
     
         .intro-p {
             grid-row: 2;
-            grid-column-start: 2;
-            grid-column-end: 4;
+            grid-column: 2;
+            // grid-column-start: 2;
+            // grid-column-end: 4;
             font-size: $small-font;
             width: 50%;
             margin-top: 10%;
-            margin-left: 25%;
+            width: 100%;
+            // margin-left: 25%;
         }
     }
 
