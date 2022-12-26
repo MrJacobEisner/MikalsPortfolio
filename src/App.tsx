@@ -50,7 +50,7 @@ function App() {
                 <a className="nav-item clickable" onClick={() => helpers.navigate("")}>
                     Resumé
                 </a>
-                <a className="nav-item clickable" onClick={() => helpers.navigate("")}>
+                <a className="nav-item clickable" onClick={() => helpers.navigate("footer")}>
                     Contact
                 </a>
                 {/* <hr id="indicator" className="nav-item white-highlight"></hr> */}
@@ -84,7 +84,7 @@ function App() {
                 </div>
             </main>
             {/* Footer */}
-            <footer>
+            <footer id="footer">
                 <div className="contact-info">
                     <GithubLogo
                         className="contact-logos clickable"
