@@ -75,12 +75,20 @@ function App() {
                         backgroundImage={tnm_bck}
                         heading="True North Mortgage"
                         subHeading="Student Software Developer (Summers 2022 - Present)"
-                    />
+                        id="tnm"
+                        infoColorRgb="36, 65, 122"
+                    >
+                        At True North, I was a full-stack developer tasked with leading Project Cadmus, the in-house document
+                        generation system. To complete this, I worked with technologies such as nginx, docker, react, alongside general
+                        scripting in python and bash.
+                    </Card>
                     <Card
                         backgroundImage={ualberta_bck}
                         heading="UAlberta"
-                        subHeading="Computing Science TA (January 2022 - April 2022)"
-                    />
+                        subHeading="Computing Science TA (January 2023 - April 2023)"
+                        id="uofa"
+                        infoColorRgb="39, 93, 56"
+                    ></Card>
                 </div>
             </main>
             {/* Footer */}

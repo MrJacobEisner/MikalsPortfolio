@@ -40,7 +40,6 @@ export function openUrl(url: string){
 }
 
 export function scrollButton() {
-    // console.log("this is a test");
     const app: Element = document.getElementsByClassName("App")[0];
     let scroll_button: HTMLElement | null = document.getElementById("scroll-button");
     if (app.scrollTop > 75) {
