@@ -10,6 +10,11 @@ import "./globals";
 import "./App.scss";
 
 function setup() {
+    // Haneling if on moblie (init small window width)
+    if (window.innerWidth === 500) {
+        helpers.hideNav();
+    }
+
     // changing the text of my thing
     setInterval(() => {
         helpers.changeText();
