@@ -21,12 +21,6 @@ function animateCard(clicked: boolean, id: string) {
         // animate text out
         return;
     }
-
-    setTimeout(() => {
-        card_text.opacity = "100%";
-    }, 800);
-
-    return;
 }
 
 interface CardProperties {

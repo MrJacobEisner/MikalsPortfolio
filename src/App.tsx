@@ -6,7 +6,7 @@ import tnm_bck from "./images/tnm.png";
 import ualberta_bck from "./images/ualberta.jpeg";
 import Card from "./components/Card";
 import * as helpers from "./helpers";
-import "./globals.ts";
+import "./globals";
 import "./App.scss";
 
 function setup() {
@@ -15,10 +15,15 @@ function setup() {
         helpers.changeText();
     }, 5000);
 
-    // addEventListener("scroll", (event) => {});
-    // window.onscroll = function () {
-    //     helpers.scrollButton();
-    // };
+    window.addEventListener("resize", () => {
+        if (window.innerWidth === 500) {
+            setTimeout(() => {
+                helpers.hideNav();
+            }, 750);
+        } else {
+            helpers.showNav();
+        }
+    });
 }
 
 function App() {

@@ -2,6 +2,17 @@
 @import "animations.scss";
 @import "variables.scss";
 
+@media only screen and (max-width: 500px) { 
+    .nav-item { 
+        opacity: 0%;
+        // display: none; 
+    } 
+}
+
+.hidden {
+    display: none;
+}
+
 .App {
     text-align: center;
     height: inherit;
@@ -9,7 +20,7 @@
     grid-template-rows: 75px max-content 75px;
     grid-template-columns: 1;
     overflow-y: scroll;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -51,7 +62,8 @@ h2 {
     
     .nav-item {
         transition: $hover-fade-time;
-        font-size: $item-font;
+        // font-size: $item-font;
+        font-size: $smaller-font;
         color: $font-grey;
         // grid-row: 1;
         margin-left: auto;

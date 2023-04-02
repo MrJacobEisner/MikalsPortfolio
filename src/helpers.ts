@@ -51,3 +51,21 @@ export function scrollButton() {
     scroll_button?.classList.add("fade");
     scroll_button?.classList.remove("clickable")
 }
+
+export function hideNav() {
+    let nav_items: HTMLCollectionOf<Element> = document.getElementsByClassName("nav-item");
+    for (let i = 0; i < nav_items.length; i++) {
+        nav_items[i].classList.add("hidden");
+    }
+}
+
+export function showNav() {
+    let nav_items: HTMLCollectionOf<Element> = document.getElementsByClassName("nav-item");
+    for (let i = 0; i < nav_items.length; i++) {
+        let nav_item = nav_items[i];
+        if (nav_item.classList.contains("hidden")) {
+            nav_item.classList.remove("hidden");
+        }
+        // .classList.add("hidden");
+    }
+}
