@@ -12,7 +12,10 @@ import "./App.scss";
 function setup() {
     // Haneling if on moblie (init small window width)
     if (window.innerWidth === 500) {
-        helpers.hideNav();
+        // need the ui to load so we wait.
+        setTimeout(() => {
+            helpers.hideNav();
+        }, 50);
     }
 
     // changing the text of my thing
