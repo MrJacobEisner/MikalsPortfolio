@@ -15,7 +15,7 @@ function setup() {
         // need the ui to load so we wait.
         setTimeout(() => {
             helpers.hideNav();
-        }, 50);
+        }, 100);
     }
 
     // changing the text of my thing
