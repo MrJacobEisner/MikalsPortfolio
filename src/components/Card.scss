@@ -2,7 +2,11 @@
 $tnm-bck: "../images/tnm.png";
 
 .card {
-    transition: all 1s;
+    // transition timings
+    // transition: width 1s;
+    transition: filter 1s;
+
+
     float: right;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -41,6 +45,7 @@ $tnm-bck: "../images/tnm.png";
         height: 100%;
         grid-column: span 3;
         grid-row: span 3;
+        transition: width 1s;
         
         h2 {
             position: absolute;
@@ -62,7 +67,7 @@ $tnm-bck: "../images/tnm.png";
         }
 
         .info {
-            transition: 0.5s;
+            transition: width 0.5s;
             position: absolute;
 
             border-radius: 20px;

@@ -4,23 +4,23 @@ import "./Card.scss";
 
 function animateCard(clicked: boolean, id: string) {
     let card: CSSStyleDeclaration = document.getElementById(id + "-info")!.style;
-    let card_text = document.getElementById(id + "-info-text")!.style;
+    let card_text: CSSStyleDeclaration = document.getElementById(id + "-info-text")!.style;
 
-    let opening: boolean = card.width == "0%" ? true : false;
+    let opening: boolean = card.width === "0%" ? true : false;
 
-    // if (!clicked) {
-    //     // animate text out
-    // }
-
-    // card.width = !clicked || card.width != "0%" ? "0%" : "90%";
-    card.width = !clicked || card.width != "0%" ? "0%" : "90%";
-    if (clicked) {
-        // animate text in
-        return;
+    if (clicked && opening) {
+        card.width = "90%";
+        setTimeout(() => {
+            card_text.opacity = "100%";
+        }, 400);
     } else {
         // animate text out
-        return;
+        card_text.opacity = "0%";
+        setTimeout(() => {
+            card.width = "0%";
+        }, 350);
     }
+    return;
 }
 
 interface CardProperties {
