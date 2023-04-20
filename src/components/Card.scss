@@ -14,6 +14,7 @@ $tnm-bck: "../images/tnm.png";
     min-height: 150px;
     max-height: 360px;
     margin-bottom: 5%;
+    overflow-y: hidden;
 
     cursor: pointer;
     filter: drop-shadow(10px 10px 15px rgba(85, 85, 85, 0.29));
