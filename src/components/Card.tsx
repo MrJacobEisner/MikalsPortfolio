@@ -1,4 +1,3 @@
-import { click } from "@testing-library/user-event/dist/click";
 import React from "react";
 import "./Card.scss";
 
@@ -8,6 +7,7 @@ function animateCard(clicked: boolean, id: string) {
 
     let opening: boolean = card.width === "0%" ? true : false;
 
+    // BUG: when closing if leave hover and re-enter, the text is still there
     if (clicked && opening) {
         card.width = "90%";
         setTimeout(() => {
@@ -24,14 +24,14 @@ function animateCard(clicked: boolean, id: string) {
 }
 
 interface CardProperties {
-    // children?: JSX.Element;
     backgroundImage: string;
     infoColorRgb: string;
     height?: string;
     heading: string;
     subHeading: string;
     id: string;
-    children?: string;
+    children?: JSX.Element;
+    // children?: string;
 }
 
 export default function Card(properties: CardProperties) {
@@ -67,9 +67,9 @@ export default function Card(properties: CardProperties) {
                     className="info"
                     style={{ backgroundColor: `rgb(${properties.infoColorRgb})`, width: "0%" }}
                 >
-                    <p id={`${properties.id}-info-text`} className="info-text">
+                    <div id={`${properties.id}-info-text`} className="info-text">
                         {properties.children}
-                    </p>
+                    </div>
                 </div>
             </div>
         </div>

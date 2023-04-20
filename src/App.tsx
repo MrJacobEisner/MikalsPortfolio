@@ -66,9 +66,11 @@ function App() {
                         id="tnm"
                         infoColorRgb="36, 65, 122"
                     >
-                        At True North, I was a full-stack developer tasked with leading Project Cadmus, the in-house document
-                        generation system. To complete this, I worked with technologies such as nginx, docker, react, alongside general
-                        scripting in python and bash.
+                        <p>
+                            At True North, I was a full-stack developer tasked with leading Project Cadmus, the in-house document
+                            generation system. To complete this, I worked with technologies such as nginx, docker, react, alongside
+                            general scripting in python and bash.
+                        </p>
                     </Card>
                     <Card
                         backgroundImage={ualberta_bck}
