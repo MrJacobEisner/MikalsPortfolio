@@ -32,15 +32,17 @@ h2 {
 }
 
 #scroll-button {
+    z-index: 1;
     transition: $hover-fade-time;
     opacity: 50%;
     position: absolute;
     right: 0;
     bottom: 0;
-    margin-bottom: 2%;
-    margin-right: 2%;
+    margin-bottom: max(2%, 20px);
+    margin-right: max(3%, 30px);
     fill: $font-grey;
-    width: 3%;
+    width: max(5%, 30px);
+    height: max(5%, 30px);
     border: none;
     &:hover{
         fill: white;
