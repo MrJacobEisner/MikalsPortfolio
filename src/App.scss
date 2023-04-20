@@ -157,31 +157,28 @@ h2 {
 }
 
 footer {
+    display: grid;
     align-items: center;
     justify-items: center;
     grid-row: 3;
     grid-column-start: 1;
     grid-column-end: 4;
     background-color: $light-grey;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 75px;
 
-    .contact-info {
-        grid-column: 2;
-    
         .contact-logos {
             transition: $hover-fade-time;
             fill: $font-grey;
             margin-top: 10px;
+            margin-bottom: 10px;
             margin-left: 30px;
-            height: 65px;
-            width: 65px;
+            height: 60px;
+            width: 60px;
 
             &:hover {
                 fill: white;
             }
             
         }
-    }
 }

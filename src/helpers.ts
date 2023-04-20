@@ -3,7 +3,7 @@ import "./globals"
 
 export function setup() {
     // Haneling if on moblie (init small window width)
-    if (window.innerWidth === 500) {
+    if (window.innerWidth <= 500) {
         // need the ui to load so we wait.
         setTimeout(() => {
             hideNav();
@@ -16,7 +16,7 @@ export function setup() {
     }, 5000);
 
     window.addEventListener("resize", () => {
-        if (window.innerWidth === 500) {
+        if (window.innerWidth <= 500) {
             setTimeout(() => {
                 hideNav();
             }, 750);

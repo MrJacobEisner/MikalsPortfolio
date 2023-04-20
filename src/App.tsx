@@ -2,6 +2,7 @@ import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as GithubLogo } from "./images/github.svg";
 import { ReactComponent as EmailIcon } from "./images/email.svg";
 import { ReactComponent as ScrollIcon } from "./images/scroll.svg";
+import { ReactComponent as LinkedinIcon } from "./images/linkedin.svg";
 import tnm_bck from "./images/tnm.png";
 import ualberta_bck from "./images/ualberta.jpeg";
 import Card from "./components/Card";
@@ -81,22 +82,25 @@ function App() {
                     ></Card>
                 </div>
             </main>
-            {/* Footer */}
             <footer id="footer">
-                <div className="contact-info">
-                    <GithubLogo
-                        className="contact-logos clickable"
-                        onClick={() => {
-                            helpers.openUrl("https://github.com/MikalKotadia");
-                        }}
-                    />
-                    <EmailIcon
-                        className="contact-logos clickable"
-                        onClick={() => {
-                            helpers.openUrl("mailto:mikal.m.kotadia@gmail.com");
-                        }}
-                    />
-                </div>
+                <GithubLogo
+                    className="contact-logos clickable"
+                    onClick={() => {
+                        helpers.openUrl("https://github.com/MikalKotadia");
+                    }}
+                />
+                <EmailIcon
+                    className="contact-logos clickable"
+                    onClick={() => {
+                        helpers.openUrl("mailto:mikal.m.kotadia@gmail.com");
+                    }}
+                />
+                <LinkedinIcon
+                    className="contact-logos clickable"
+                    onClick={() => {
+                        helpers.openUrl("https://www.linkedin.com/in/mikalkotadia");
+                    }}
+                />
             </footer>
         </div>
     );
