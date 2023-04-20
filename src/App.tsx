@@ -9,33 +9,8 @@ import * as helpers from "./helpers";
 import "./globals";
 import "./App.scss";
 
-function setup() {
-    // Haneling if on moblie (init small window width)
-    if (window.innerWidth === 500) {
-        // need the ui to load so we wait.
-        setTimeout(() => {
-            helpers.hideNav();
-        }, 100);
-    }
-
-    // changing the text of my thing
-    setInterval(() => {
-        helpers.changeText();
-    }, 5000);
-
-    window.addEventListener("resize", () => {
-        if (window.innerWidth === 500) {
-            setTimeout(() => {
-                helpers.hideNav();
-            }, 750);
-        } else {
-            helpers.showNav();
-        }
-    });
-}
-
 function App() {
-    setup();
+    helpers.setup();
 
     return (
         <div

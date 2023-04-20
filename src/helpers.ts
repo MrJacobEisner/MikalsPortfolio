@@ -1,6 +1,32 @@
 import "./App.scss"
 import "./globals"
 
+export function setup() {
+    // Haneling if on moblie (init small window width)
+    if (window.innerWidth === 500) {
+        // need the ui to load so we wait.
+        setTimeout(() => {
+            hideNav();
+        }, 100);
+    }
+
+    // changing the text of my thing
+    setInterval(() => {
+        changeText();
+    }, 5000);
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth === 500) {
+            setTimeout(() => {
+                hideNav();
+            }, 750);
+        } else {
+            showNav();
+        }
+    });
+}
+
+
 export function navigate(id: string){
     document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
 }
