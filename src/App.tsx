@@ -67,11 +67,15 @@ function App() {
                         id="tnm"
                         infoColorRgb="36, 65, 122"
                     >
-                        <p>
-                            At True North, I was a full-stack developer tasked with leading Project Cadmus, the in-house document
-                            generation system. To complete this, I worked with technologies such as nginx, docker, react, alongside
-                            general scripting in python and bash.
-                        </p>
+                        <>
+                            <h3>Technologies used</h3>
+                            <ul>
+                                <li>PHP with the Yii2 framework</li>
+                                <li>Python3</li>
+                                <li>React Typescript</li>
+                            </ul>
+                        </>
+                        <h3>something in here</h3>
                     </Card>
                     <Card
                         backgroundImage={ualberta_bck}
@@ -82,7 +86,8 @@ function App() {
                     ></Card>
                 </div>
             </main>
-            <footer id="footer">
+            {/* using a div instead of a footer bc of scrolling issue on mobile */}
+            <div className="footer">
                 <GithubLogo
                     className="contact-logos clickable"
                     onClick={() => {
@@ -101,7 +106,7 @@ function App() {
                         helpers.openUrl("https://www.linkedin.com/in/mikalkotadia");
                     }}
                 />
-            </footer>
+            </div>
         </div>
     );
 }

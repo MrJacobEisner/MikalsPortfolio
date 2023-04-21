@@ -30,7 +30,7 @@ interface CardProperties {
     heading: string;
     subHeading: string;
     id: string;
-    children?: JSX.Element;
+    children?: JSX.Element | JSX.Element[];
     // children?: string;
 }
 
