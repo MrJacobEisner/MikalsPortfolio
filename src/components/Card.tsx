@@ -1,25 +1,37 @@
 import React from "react";
 import "./Card.scss";
 
-function animateCard(clicked: boolean, id: string) {
+function animateCard(id: string) {
     let card: CSSStyleDeclaration = document.getElementById(id + "-info")!.style;
     let card_text: CSSStyleDeclaration = document.getElementById(id + "-info-text")!.style;
 
     let opening: boolean = card.width === "0%" ? true : false;
-    // test
+
     // BUG: when closing if leave hover and re-enter, the text is still there
-    if (clicked && opening) {
+    if (opening) {
         card.width = "90%";
+
         setTimeout(() => {
+            // close the card if click anywhere outside.
+            window.addEventListener(
+                "click",
+                () => {
+                    animateCard(id);
+                },
+                { once: true }
+            );
+
             card_text.opacity = "100%";
         }, 400);
-    } else {
-        // animate text out
-        card_text.opacity = "0%";
-        setTimeout(() => {
-            card.width = "0%";
-        }, 350);
+
+        return;
     }
+
+    // animate text out
+    card_text.opacity = "0%";
+    setTimeout(() => {
+        card.width = "0%";
+    }, 350);
     return;
 }
 
@@ -51,11 +63,8 @@ export default function Card(properties: CardProperties) {
         <div
             className="card"
             style={cont_styles}
-            onMouseLeave={() => {
-                animateCard(false, properties.id);
-            }}
             onClick={() => {
-                animateCard(true, properties.id);
+                animateCard(properties.id);
             }}
         >
             <div className="bck-img" style={img_styles} />
