@@ -6,7 +6,7 @@ function animateCard(clicked: boolean, id: string) {
     let card_text: CSSStyleDeclaration = document.getElementById(id + "-info-text")!.style;
 
     let opening: boolean = card.width === "0%" ? true : false;
-
+    // test
     // BUG: when closing if leave hover and re-enter, the text is still there
     if (clicked && opening) {
         card.width = "90%";
