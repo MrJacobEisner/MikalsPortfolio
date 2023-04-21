@@ -1,17 +1,55 @@
 import React from "react";
 import "./Card.scss";
 
+function animateCard(id: string) {
+    let card: CSSStyleDeclaration = document.getElementById(id + "-info")!.style;
+    let card_text: CSSStyleDeclaration = document.getElementById(id + "-info-text")!.style;
+
+    let opening: boolean = card.width === "0%" ? true : false;
+
+    // BUG: when closing if leave hover and re-enter, the text is still there
+    if (opening) {
+        card.width = "90%";
+
+        setTimeout(() => {
+            // close the card if click anywhere outside.
+            window.addEventListener(
+                "click",
+                () => {
+                    animateCard(id);
+                },
+                { once: true }
+            );
+
+            card_text.opacity = "100%";
+        }, 400);
+
+        return;
+    }
+
+    // animate text out
+    card_text.opacity = "0%";
+    setTimeout(() => {
+        card.width = "0%";
+    }, 350);
+    return;
+}
+
 interface CardProperties {
-    // children?: JSX.Element;
     backgroundImage: string;
+    infoColorRgb: string;
     height?: string;
     heading: string;
     subHeading: string;
+    id: string;
+    children?: JSX.Element | JSX.Element[];
+    // children?: string;
 }
 
 export default function Card(properties: CardProperties) {
     let img: string = `url('${properties.backgroundImage}')`;
-    let height = properties.height == null ? "35%" : properties.height;
+
+    // test.getColor(properties.backgroundImage);
 
     const cont_styles: React.CSSProperties = {
         height: properties.height,
@@ -22,11 +60,26 @@ export default function Card(properties: CardProperties) {
     };
 
     return (
-        <div className="card" style={cont_styles}>
+        <div
+            className="card"
+            style={cont_styles}
+            onClick={() => {
+                animateCard(properties.id);
+            }}
+        >
             <div className="bck-img" style={img_styles} />
             <div className="content">
                 <h2>{properties.heading}</h2>
-                <p>{properties.subHeading}</p>
+                <p className="subheading">{properties.subHeading}</p>
+                <div
+                    id={`${properties.id}-info`}
+                    className="info"
+                    style={{ backgroundColor: `rgb(${properties.infoColorRgb})`, width: "0%" }}
+                >
+                    <div id={`${properties.id}-info-text`} className="info-text">
+                        {properties.children}
+                    </div>
+                </div>
             </div>
         </div>
     );
