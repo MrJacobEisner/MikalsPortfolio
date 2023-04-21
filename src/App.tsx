@@ -103,7 +103,23 @@ function App() {
                         subHeading="Computing Science TA (January 2023 - April 2023)"
                         id="uofa"
                         infoColorRgb="39, 93, 56"
-                    ></Card>
+                    >
+                        <div>
+                            <h3>Skills Required:</h3>
+                            <ul>
+                                <li>Good Commuication with non-programmers</li>
+                                <li>Python3</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h3>Overview:</h3>
+                            <p>
+                                The TA position required the ability to clearly and consicely explain programing concepts to new
+                                students and aid them in the finding and solving of bugs within their programs.
+                            </p>
+                        </div>
+                    </Card>
                 </div>
             </main>
             {/* using a div instead of a footer bc of scrolling issue on mobile */}
