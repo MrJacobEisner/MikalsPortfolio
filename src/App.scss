@@ -31,6 +31,10 @@ h2 {
     font-size: $medium-font;
 }
 
+h3 {
+    font-size: $small-medium-font;
+}
+
 #scroll-button {
     z-index: 1;
     transition: $hover-fade-time;

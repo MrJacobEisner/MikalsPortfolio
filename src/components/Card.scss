@@ -78,6 +78,9 @@ $tnm-bck: "../images/tnm.png";
             max-height: 360px;
             width: 0%;
             .info-text {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr;
                 margin: 3%;
                 opacity: 0%;
                 transition: opacity 0.5s;

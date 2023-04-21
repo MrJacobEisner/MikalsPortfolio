@@ -67,15 +67,35 @@ function App() {
                         id="tnm"
                         infoColorRgb="36, 65, 122"
                     >
-                        <>
-                            <h3>Technologies used</h3>
+                        <div>
+                            <h3>Technologies used:</h3>
                             <ul>
                                 <li>PHP with the Yii2 framework</li>
                                 <li>Python3</li>
                                 <li>React Typescript</li>
+                                <li>Docker</li>
+                                <li>Redis</li>
+                                <li>PostgreSQL</li>
+                                <li>Figma</li>
                             </ul>
-                        </>
-                        <h3>something in here</h3>
+                        </div>
+
+                        <div>
+                            <h3>Description:</h3>
+                            <p>
+                                Primarily in a full-stack position working on new projects, with the occational writing scripts and
+                                tools to help with internal development.
+                            </p>
+                        </div>
+
+                        <div>
+                            <h3>Projects:</h3>
+                            <ul>
+                                <li>
+                                    Cadmus - A headless or GUI based internal document generation system accessable through a REST API
+                                </li>
+                            </ul>
+                        </div>
                     </Card>
                     <Card
                         backgroundImage={ualberta_bck}
