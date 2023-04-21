@@ -2,14 +2,25 @@
 @import "animations.scss";
 @import "variables.scss";
 
+@media only screen and (max-width: 500px) { 
+    .nav-item { 
+        opacity: 0%;
+        // display: none; 
+    } 
+}
+
+.hidden {
+    display: none;
+}
+
 .App {
-    text-align: center;
+    // text-align: center;
     height: inherit;
     display: grid;
     grid-template-rows: 75px max-content 75px;
     grid-template-columns: 1;
     overflow-y: scroll;
-    overflow-x: scroll;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -20,16 +31,22 @@ h2 {
     font-size: $medium-font;
 }
 
+h3 {
+    font-size: $small-medium-font;
+}
+
 #scroll-button {
+    z-index: 1;
     transition: $hover-fade-time;
     opacity: 50%;
     position: absolute;
     right: 0;
     bottom: 0;
-    margin-bottom: 2%;
-    margin-right: 2%;
+    margin-bottom: max(2%, 20px);
+    margin-right: max(3%, 30px);
     fill: $font-grey;
-    width: 3%;
+    width: max(5%, 30px);
+    height: max(5%, 30px);
     border: none;
     &:hover{
         fill: white;
@@ -51,7 +68,8 @@ h2 {
     
     .nav-item {
         transition: $hover-fade-time;
-        font-size: $item-font;
+        // font-size: $item-font;
+        font-size: $smaller-font;
         color: $font-grey;
         // grid-row: 1;
         margin-left: auto;
@@ -144,32 +162,32 @@ h2 {
     }
 }
 
-footer {
+.footer {
+    display: grid;
     align-items: center;
     justify-items: center;
     grid-row: 3;
     grid-column-start: 1;
     grid-column-end: 4;
     background-color: $light-grey;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 75px;
+    // height: 75px;
 
-    .contact-info {
-        grid-column: 2;
-    
         .contact-logos {
             transition: $hover-fade-time;
             fill: $font-grey;
             margin-top: 10px;
+            margin-bottom: 10px;
             margin-left: 30px;
-            height: 65px;
-            width: 65px;
+            height: 60%;
+            width: 60%;
+            // height: 60px;
+            // width: 60px;
 
             &:hover {
                 fill: white;
             }
             
         }
-    }
 }

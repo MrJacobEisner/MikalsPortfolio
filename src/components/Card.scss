@@ -2,7 +2,11 @@
 $tnm-bck: "../images/tnm.png";
 
 .card {
-    transition: all 1s;
+    // transition timings
+    // transition: width 1s;
+    transition: filter 1s;
+
+
     float: right;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -14,6 +18,7 @@ $tnm-bck: "../images/tnm.png";
     min-height: 150px;
     max-height: 360px;
     margin-bottom: 5%;
+    overflow-y: hidden;
 
     cursor: pointer;
     filter: drop-shadow(10px 10px 15px rgba(85, 85, 85, 0.29));
@@ -28,35 +33,64 @@ $tnm-bck: "../images/tnm.png";
         right: 0;
         height: 100%;
         width: 100%;
-        filter: blur(0px) brightness(40%);
+        filter: blur(0px) brightness(30%);
     }
     .content {
-        grid-template-columns: inherit;
-        width: 100%;
-        grid-column: span 3;
-        grid-row: 2;
         position: absolute;
-        z-index: 99 !important;
+        z-index: 1 !important;
+        display: grid;
+        grid-template-columns: inherit;
+        grid-template-rows: 1fr 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        grid-column: span 3;
+        grid-row: span 3;
+        transition: width 1s;
         
         h2 {
+            position: absolute;
             text-align: left;
-            grid-column-start: 1;
-            grid-column-end: 3;
+            grid-column: span 3;
+            grid-row: 2;
             margin-left: 5%;
             margin-top: 0%;
             margin-bottom: 0%;
         }
         
-        p {
+        .subheading {
+            position: absolute;
             text-align: left;
-            grid-column-start: 1;
-            grid-column-end: 3;
+            grid-column: 1;
+            grid-row: 2;
             margin-left: 5%;
-            margin-top: 0%;
+            margin-top: max(30px, 5%);
+        }
+
+        .info {
+            transition: width 0.5s;
+            position: absolute;
+
+            border-radius: 20px;
+            grid-column: span 3;
+            grid-row: span 4;
+            min-height: 150px;
+            height: 100%;
+            max-height: 360px;
+            width: 0%;
+            .info-text {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr;
+                margin: 3%;
+                opacity: 0%;
+                transition: opacity 0.5s;
+            }
+
+            // font-size: 0;
         }
     }
 
     &:hover {
-        filter: drop-shadow(10px 10px 15px rgba(184, 182, 182, 0.29));
+        filter: drop-shadow(0px 0px 15px rgba(184, 182, 182, 0.29));
     }
 }
