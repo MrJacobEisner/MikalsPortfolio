@@ -6,8 +6,6 @@ import { ReactComponent as LinkedinIcon } from "./images/linkedin.svg";
 import tnm_bck from "./images/tnm.png";
 import ualberta_bck from "./images/ualberta.jpeg";
 import Card from "./components/Card";
-import Tile from "./components/Tile";
-import TileCollection from "./components/TileCollection";
 import * as helpers from "./helpers";
 import "./globals";
 import "./App.scss";
@@ -58,22 +56,6 @@ function App() {
                 </div>
                 <div className="projects">
                     <h1>Projects</h1>
-                    <TileCollection>
-                        <Tile
-                            backgroundImage={tnm_bck}
-                            heading="True North Mortgage"
-                            subHeading="Student Software Developer (Summers 2022 - Present)"
-                            id="test"
-                            infoColorRgb="36, 65, 122"
-                        ></Tile>
-                        <Tile
-                            backgroundImage={tnm_bck}
-                            heading="True North Mortgage"
-                            subHeading="Student Software Developer (Summers 2022 - Present)"
-                            id="test2"
-                            infoColorRgb="36, 65, 122"
-                        ></Tile>
-                    </TileCollection>
                 </div>
                 <div id="experience" className="experience">
                     <h1>Work Experience</h1>
