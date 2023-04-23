@@ -11,9 +11,9 @@ export function setup() {
     }
 
     // changing the text of my thing
-    setInterval(() => {
-        changeText();
-    }, 5000);
+    // setInterval(() => {
+    //     changeText();
+    // }, 5000);
 
     window.addEventListener("resize", () => {
         if (window.innerWidth <= 500) {

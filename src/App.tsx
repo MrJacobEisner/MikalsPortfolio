@@ -6,6 +6,8 @@ import { ReactComponent as LinkedinIcon } from "./images/linkedin.svg";
 import tnm_bck from "./images/tnm.png";
 import ualberta_bck from "./images/ualberta.jpeg";
 import Card from "./components/Card";
+import Tile from "./components/Tile";
+import TileCollection from "./components/TileCollection";
 import * as helpers from "./helpers";
 import "./globals";
 import "./App.scss";
@@ -34,7 +36,7 @@ function App() {
                     About
                 </a>
                 <a className="nav-item clickable" onClick={() => helpers.navigate("experience")}>
-                    Experience
+                    Work Experience
                 </a>
                 <a className="nav-item clickable" onClick={() => helpers.navigate("")}>
                     Resumé
@@ -47,19 +49,34 @@ function App() {
             {/* Body */}
             <main id="mainBody">
                 <div id="about" className="about">
-                    <div className="greeting">
-                        <h1 id="beginingGreeting"></h1>
-                        <h1 style={{ color: "white" }}>Hi! I'm Mikal</h1>
-                        <h1 id="endingGreeting"></h1>
-                    </div>
+                    <h1>Hi! Im Mikal!</h1>
                     <p className="intro-p">
                         I am an honours CS student at the University of Alberta with a passion for any and all technology. Besides
-                        programming, I love listening to music, gaming, and working out.
+                        programming, I love listening to music, gaming, and working out. While primarily a back-end developer, I have
+                        experience in full-stack development.
                     </p>
                 </div>
-
+                <div className="projects">
+                    <h1>Projects</h1>
+                    <TileCollection>
+                        <Tile
+                            backgroundImage={tnm_bck}
+                            heading="True North Mortgage"
+                            subHeading="Student Software Developer (Summers 2022 - Present)"
+                            id="test"
+                            infoColorRgb="36, 65, 122"
+                        ></Tile>
+                        <Tile
+                            backgroundImage={tnm_bck}
+                            heading="True North Mortgage"
+                            subHeading="Student Software Developer (Summers 2022 - Present)"
+                            id="test2"
+                            infoColorRgb="36, 65, 122"
+                        ></Tile>
+                    </TileCollection>
+                </div>
                 <div id="experience" className="experience">
-                    <h1>Experience</h1>
+                    <h1>Work Experience</h1>
                     <Card
                         backgroundImage={tnm_bck}
                         heading="True North Mortgage"
@@ -81,9 +98,9 @@ function App() {
                         </div>
 
                         <div>
-                            <h3>Description:</h3>
+                            <h3>Overview:</h3>
                             <p>
-                                Primarily in a full-stack position working on new projects, with the occational writing scripts and
+                                Primarily in a full-stack position working on new projects, with the occational writing of scripts and
                                 tools to help with internal development.
                             </p>
                         </div>
@@ -99,24 +116,25 @@ function App() {
                     </Card>
                     <Card
                         backgroundImage={ualberta_bck}
-                        heading="UAlberta"
-                        subHeading="Computing Science TA (January 2023 - April 2023)"
+                        heading="University of Alberta"
+                        subHeading="Computing Science Teaching Assistant (January 2023 - April 2023)"
                         id="uofa"
                         infoColorRgb="39, 93, 56"
                     >
                         <div>
                             <h3>Skills Required:</h3>
                             <ul>
-                                <li>Good Commuication with non-programmers</li>
                                 <li>Python3</li>
+                                <li>Good Commuication with non-programmers</li>
+                                <li>Fast code tracing and understanding</li>
                             </ul>
                         </div>
 
                         <div>
                             <h3>Overview:</h3>
                             <p>
-                                The TA position required the ability to clearly and consicely explain programing concepts to new
-                                students and aid them in the finding and solving of bugs within their programs.
+                                The teaching assistant position required the ability to clearly and consicely explain programing
+                                concepts to new students and aid them in the finding and solving of bugs within their programs.
                             </p>
                         </div>
                     </Card>
