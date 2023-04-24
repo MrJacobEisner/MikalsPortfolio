@@ -76,6 +76,7 @@ function App() {
                             subHeading="CMPUT 379 class project"
                             id="1"
                         ></CarouselItem>
+                        <CarouselItem backgroundImage={tnm_bck} heading="Test Item" subHeading="Used in testing" id="2"></CarouselItem>
                     </Carousel>
                 </div>
                 <div id="experience" className="experience">

@@ -1,28 +1,27 @@
 import "./Carousel.scss";
+// import { sleep } from "../helpers";
 import { ReactComponent as ScrollIcon } from "../images/scroll.svg";
 
 import { useState } from "react";
 
-function changeElement(changeIndex: Function, prev_index: number, num_items: number, forwards: boolean) {
-    // let num_items = ids.length;
-
+function changeElement(changeIndex: Function, curr_index: number, num_items: number, forwards: boolean) {
     let index: number;
+    // debugger;
     if (forwards) {
-        index = prev_index === num_items - 1 ? 0 : prev_index + 1;
+        index = curr_index === num_items - 1 ? 0 : curr_index + 1;
     } else {
-        index = prev_index === 0 ? num_items - 1 : prev_index - 1;
+        index = curr_index === 0 ? num_items - 1 : curr_index - 1;
     }
     changeIndex(index);
 
-    let prev_item: HTMLElement | null = document.getElementById("carouselItem" + prev_index);
+    let curr_item: HTMLElement | null = document.getElementById("carouselItem" + curr_index);
     let next_item: HTMLElement | null = document.getElementById("carouselItem" + index);
 
-    prev_item?.classList.add("fade");
+    next_item?.classList.remove("hide");
     next_item?.classList.remove("fade");
-    next_item?.classList.remove("hide-item");
-    // prev_item?.classList.add("hide-item");
+    curr_item?.classList.add("fade");
     setTimeout(() => {
-        prev_item?.classList.add("hide-item");
+        curr_item?.classList.add("hide");
     }, 750);
 }
 

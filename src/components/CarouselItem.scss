@@ -14,7 +14,7 @@
     column-span: all;
     height: 75vh;
 
-    transition: opacity 0.75s;
+    transition: opacity 0.5s;
 }
 
 .preview-info {
@@ -29,9 +29,5 @@
 }
 
 .expanded-info {
-    display: none;
-}
-
-.hide-item {
     display: none;
 }
