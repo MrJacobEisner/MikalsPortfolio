@@ -17,10 +17,13 @@ function changeElement(changeIndex: Function, prev_index: number, num_items: num
     let prev_item: HTMLElement | null = document.getElementById("carouselItem" + prev_index);
     let next_item: HTMLElement | null = document.getElementById("carouselItem" + index);
 
-    prev_item?.classList.add("hide-item");
+    prev_item?.classList.add("fade");
+    next_item?.classList.remove("fade");
     next_item?.classList.remove("hide-item");
-
-    console.log(index);
+    // prev_item?.classList.add("hide-item");
+    setTimeout(() => {
+        prev_item?.classList.add("hide-item");
+    }, 750);
 }
 
 interface CauroselProperties {
@@ -39,9 +42,6 @@ export default function Carousel(props: CauroselProperties) {
     } else {
         num_items = 1;
     }
-
-    // let ids = items.map((iter) => "carouselItem" + iter.props.id);
-    // console.log(items[0].type);
 
     return (
         <div className="carousel">

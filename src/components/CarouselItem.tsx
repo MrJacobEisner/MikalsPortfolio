@@ -14,7 +14,7 @@ export default function CarouselItem(props: CarouselItemProperties) {
     };
 
     // do not hide the first item in the carousel
-    let hidden: string = props.id === "0" ? "" : "hide-item";
+    let hidden: string = props.id === "0" ? "" : "hide-item fade";
 
     return (
         <div id={"carouselItem" + props.id} className={"carousel-item " + hidden} style={img_styles}>

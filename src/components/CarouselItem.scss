@@ -3,11 +3,18 @@
 
 
 .carousel-item{
+    grid-column: 1;
+    grid-row: 1;
+
+    position: relative;
+    opacity: 100%;
     display: grid;
     grid-template-columns: 25fr 75fr 25fr;
     grid-template-rows: 10fr 2fr 1fr;
     column-span: all;
     height: 75vh;
+
+    transition: opacity 0.75s;
 }
 
 .preview-info {
