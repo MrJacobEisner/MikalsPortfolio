@@ -1,0 +1,13 @@
+@import "../variables.scss";
+
+
+.carousel-item{
+    display: grid;
+    grid-template-columns: 25fr 75fr 25fr;
+    grid-template-rows: 7fr 3fr;
+    column-span: all;
+    height: 75vh;
+    border-radius: inherit;
+    // filter: brightness(100%);
+    // margin-bottom: 50px;
+}

@@ -1,5 +1,5 @@
 import "./App.scss"
-import "./globals"
+import React from "react";
 
 export function setup() {
     // Haneling if on moblie (init small window width)

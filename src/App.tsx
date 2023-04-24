@@ -1,3 +1,5 @@
+import "./App.scss";
+// images
 import { ReactComponent as Logo } from "./images/logo.svg";
 import { ReactComponent as GithubLogo } from "./images/github.svg";
 import { ReactComponent as EmailIcon } from "./images/email.svg";
@@ -5,10 +7,13 @@ import { ReactComponent as ScrollIcon } from "./images/scroll.svg";
 import { ReactComponent as LinkedinIcon } from "./images/linkedin.svg";
 import tnm_bck from "./images/tnm.png";
 import ualberta_bck from "./images/ualberta.jpeg";
+
+// components
+import Carousel from "./components/Carousel";
 import Card from "./components/Card";
 import * as helpers from "./helpers";
-import "./globals";
-import "./App.scss";
+import React from "react";
+import CarouselItem from "./components/CarouselItem";
 
 function App() {
     helpers.setup();
@@ -56,6 +61,14 @@ function App() {
                 </div>
                 <div className="projects">
                     <h1>Projects</h1>
+                    <Carousel>
+                        <CarouselItem
+                            backgroundImage={tnm_bck}
+                            heading="BeyondControl"
+                            subHeading="HackEd 2023"
+                            link="https://github.com/Kuiper-HackEd2023/BeyondControl-Kuiper"
+                        ></CarouselItem>
+                    </Carousel>
                 </div>
                 <div id="experience" className="experience">
                     <h1>Work Experience</h1>
