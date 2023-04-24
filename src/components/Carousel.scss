@@ -8,7 +8,7 @@
     width: 100%;
     height: 75vh;
     max-height: 75vh;
-    background-color: red;
+    background-color: $darker-grey;
     border-radius: 20px;
     margin-bottom: 0px;
     // align-items: center;
@@ -42,14 +42,14 @@
         grid-row: 1;
     }
 
+    .arrow {
+        fill: $font-dark-grey;
+    }
 
 
     #back-arrow {
         grid-column: 2;
         grid-row: 1;
-        fill: $font-grey;
-        // justify-self: center;
-
 
         width: max(5%, 30px);
         height: max(5%, 30px);
@@ -59,10 +59,6 @@
     }
     #next-arrow {
         grid-column: 2;
-        grid-row: 1;
-        fill: $font-grey;
-        // justify-self: center;
-
 
         width: max(5%, 30px);
         height: max(5%, 30px);
@@ -79,6 +75,9 @@
     }
 
     .active {
+        .arrow {
+            fill: $font-grey;
+        }
         &:hover{
             width: 100%;
             #back-arrow {

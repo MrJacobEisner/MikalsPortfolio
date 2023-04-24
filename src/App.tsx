@@ -8,6 +8,7 @@ import { ReactComponent as LinkedinIcon } from "./images/linkedin.svg";
 import tnm_bck from "./images/tnm.png";
 import ualberta_bck from "./images/ualberta.jpeg";
 import hacked_bck from "./images/HackEd.jpg";
+import shell_bck from "./images/shell.png";
 
 // components
 import Carousel from "./components/Carousel";
@@ -67,7 +68,13 @@ function App() {
                             backgroundImage={hacked_bck}
                             heading="BeyondControl"
                             subHeading="HackEd 2023"
-                            link="https://github.com/Kuiper-HackEd2023/BeyondControl-Kuiper"
+                            id="0"
+                        ></CarouselItem>
+                        <CarouselItem
+                            backgroundImage={shell_bck}
+                            heading="Unix Shell in c++"
+                            subHeading="CMPUT 379 class project"
+                            id="1"
                         ></CarouselItem>
                     </Carousel>
                 </div>
