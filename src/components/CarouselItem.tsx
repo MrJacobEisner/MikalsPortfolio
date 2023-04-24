@@ -7,15 +7,19 @@ interface CarouselItemProperties {
     link: string;
 }
 
-export default function CarouselItem(properties: CarouselItemProperties) {
-    let img: string = `url('${properties.backgroundImage}')`;
+export default function CarouselItem(props: CarouselItemProperties) {
+    let img: string = `url('${props.backgroundImage}')`;
     const img_styles: React.CSSProperties = {
         backgroundImage: img,
     };
 
     return (
         <div className="carousel-item" style={img_styles}>
-            <div className="main-view"></div>
+            <div className="preview-info">
+                <h3>{props.heading}</h3>
+                <p>{props.subHeading}</p>
+            </div>
+            <div className="expanded-info"></div>
         </div>
     );
 }

@@ -7,6 +7,7 @@ import { ReactComponent as ScrollIcon } from "./images/scroll.svg";
 import { ReactComponent as LinkedinIcon } from "./images/linkedin.svg";
 import tnm_bck from "./images/tnm.png";
 import ualberta_bck from "./images/ualberta.jpeg";
+import hacked_bck from "./images/HackEd.jpg";
 
 // components
 import Carousel from "./components/Carousel";
@@ -63,7 +64,7 @@ function App() {
                     <h1>Projects</h1>
                     <Carousel>
                         <CarouselItem
-                            backgroundImage={tnm_bck}
+                            backgroundImage={hacked_bck}
                             heading="BeyondControl"
                             subHeading="HackEd 2023"
                             link="https://github.com/Kuiper-HackEd2023/BeyondControl-Kuiper"

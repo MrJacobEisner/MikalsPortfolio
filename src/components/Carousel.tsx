@@ -7,8 +7,12 @@ interface CauroselProperties {
 export default function Carousel(props: CauroselProperties) {
     return (
         <div className="carousel">
-            <ScrollIcon className="back"></ScrollIcon>
-            <ScrollIcon className="next"></ScrollIcon>
+            <div className="blurL">
+                <ScrollIcon className="back-arrow"></ScrollIcon>
+            </div>
+            <div className="blurR">
+                <ScrollIcon className="next-arrow"></ScrollIcon>
+            </div>
             {/* <div className="indicators"></div> */}
             <div className="view">{props.children}</div>
         </div>
