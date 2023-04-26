@@ -69,16 +69,20 @@ $preview-background: rgba(25, 25, 25, 0.9);
         grid-column: 1;
     }
 
-    .expanded-fading {
+    .expanded-content {
         grid-row: 1/-1;
         grid-column: 1;
+        
         display: grid;
-        grid-template-rows: 15% 83%;
+        grid-template-rows: 15% 81%;
         grid-template-columns: calc((100%/3 + 100%/3) - 2%) calc(100%/3);
         column-gap: 2%;
-        row-gap: 2%;
+        row-gap: 4%;
         padding-left: 7.5%;
         padding-right: 7.5%;
+        opacity: 100%;
+
+        transition: opacity 1s;
 
         .expanded-info-close-icon {
             grid-row: 1;

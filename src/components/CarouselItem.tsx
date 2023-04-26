@@ -5,10 +5,12 @@ import { ReactComponent as CloseIcon } from "../images/close.svg";
 import React from "react";
 import * as helpers from "../helpers";
 
+// Todo: content fading animation not working.
 function animateInfoIn(id: string) {
     let preview_info: HTMLElement | null = document.getElementById("previewInfo" + id);
     let carousel_subheading: HTMLElement | null = document.getElementById("carouselSubheading" + id);
     let expanded_info: HTMLElement | null = document.getElementById("expandedInfo" + id);
+    let expanded_content: HTMLElement | null = document.getElementById("expandedContent" + id);
     carousel_subheading?.classList.add("fade");
     preview_info?.classList.add("animate-info-forwards");
 
@@ -17,6 +19,7 @@ function animateInfoIn(id: string) {
         expanded_info?.classList.remove("hide");
         preview_info?.classList.add("hide");
         preview_info?.classList.remove("animate-info-forwards");
+        expanded_content?.classList.remove("fade");
     }, 750);
 }
 
@@ -95,7 +98,7 @@ export default function CarouselItem(props: CarouselItemProperties) {
             </div>
             <div id={"expandedInfo" + props.id} className="expanded-info hide">
                 <h3 className="expanded-info-heading">{props.heading}</h3>
-                <div id={"expandedFading" + props.id} className="expanded-fading">
+                <div id={"expandedContent" + props.id} className="expanded-content fade">
                     <CloseIcon className="expanded-info-close-icon clickable" onClick={() => animateInfoOut(props.id)} />
                     {media}
                     <div className="expanded-info-panel">
