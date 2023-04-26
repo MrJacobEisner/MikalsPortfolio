@@ -1,6 +1,7 @@
 import "./Carousel.scss";
 // import { sleep } from "../helpers";
 import { ReactComponent as ScrollIcon } from "../images/scroll.svg";
+import { animateInfoOut } from "./CarouselItem";
 
 import { useState } from "react";
 
@@ -13,7 +14,7 @@ function changeElement(changeIndex: Function, curr_index: number, num_items: num
         index = curr_index === 0 ? num_items - 1 : curr_index - 1;
     }
     changeIndex(index);
-
+    animateInfoOut(curr_index.toString());
     let curr_item: HTMLElement | null = document.getElementById("carouselItem" + curr_index);
     let next_item: HTMLElement | null = document.getElementById("carouselItem" + index);
 
@@ -55,7 +56,6 @@ export default function Carousel(props: CauroselProperties) {
             <div id="R-panel" className="blur-panels active clickable" onClick={() => changeElement(setIndex, index, num_items, true)}>
                 <ScrollIcon id="next-arrow" className="arrow"></ScrollIcon>
             </div>
-            {/* <div className="indicators"></div> */}
         </div>
     );
 }

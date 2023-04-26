@@ -64,7 +64,22 @@ $preview-background: rgba(25, 25, 25, 0.9);
     grid-template-columns: repeat(3, calc(81%/3));
     column-gap: 2%;
     row-gap: 2%;
-    
+
+    .expanded-info-close-icon {
+        grid-row: 1;
+        position: absolute;
+        width: fit-content;
+        justify-self: right;
+        right: 1%;
+        top: 2%;
+        height: 5%;
+        fill: $font-grey;
+
+        transition: fill $hover-fade-time;
+        &:hover {
+            fill: white;
+        }
+    }
     .expanded-info-heading {
         text-align: center;
         grid-row: 1;

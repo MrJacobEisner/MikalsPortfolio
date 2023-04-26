@@ -1,5 +1,7 @@
 import "./CarouselItem.scss";
 import { ReactComponent as GithubLogo } from "../images/github.svg";
+import { ReactComponent as CloseIcon } from "../images/close.svg";
+
 import React from "react";
 import * as helpers from "../helpers";
 
@@ -16,24 +18,13 @@ function animateInfoIn(id: string) {
         expanded_info?.classList.remove("hide");
         preview_info?.classList.add("hide");
         preview_info?.classList.remove("animate-info-forwards");
-
-        // remove this in favour of a close button
-        window.addEventListener(
-            "click",
-            () => {
-                animateInfoOut(id);
-            },
-            { once: true }
-        );
     }, 750);
 }
 
-function animateInfoOut(id: string) {
+export function animateInfoOut(id: string) {
     let preview_info: HTMLElement | null = document.getElementById("previewInfo" + id);
     let expanded_info: HTMLElement | null = document.getElementById("expandedInfo" + id);
     let carousel_subheading: HTMLElement | null = document.getElementById("carouselSubheading" + id);
-
-    let info_content = expanded_info?.childNodes;
 
     expanded_info?.classList.add("animate-info-backwards");
 
@@ -105,6 +96,7 @@ export default function CarouselItem(props: CarouselItemProperties) {
             </div>
             <div id={"expandedInfo" + props.id} className="expanded-info hide">
                 <h3 className="expanded-info-heading">{props.heading}</h3>
+                <CloseIcon className="expanded-info-close-icon clickable" onClick={() => animateInfoOut(props.id)} />
                 {media}
                 <div className="expanded-info-panel">
                     {description}
