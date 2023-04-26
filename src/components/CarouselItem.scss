@@ -52,16 +52,23 @@
     grid-row: 1;
     width: calc(100% - 20px);
     justify-self: center;
+    justify-content: center;
     top: 0%;
 
     background-color: rgb(25, 25, 25, 0.9);
     border: 10px solid white;
+    display: grid;
+    grid-template-rows: 15% 85%;
+    grid-template-columns: repeat(3, calc(85%/3));
+    
+    
+    .expandedInfoHeading {
+        text-align: center;
+        grid-row: 1;
+        grid-column: 1 /-1;
+    }
 
     transition: opacity 0.25s;
-
-    h3 {
-        text-align: center;
-    }
 }
 
 .animate-info-forwards {

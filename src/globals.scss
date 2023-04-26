@@ -1,5 +1,32 @@
 @import "variables.scss";
 
+
+h1 {
+    font-size: $large-font;
+}
+
+h2 {
+    font-size: $medium-font;
+}
+
+h3 {
+    font-size: $medium-small-font;
+}
+
+h4 {
+    font-size: $small-medium-font;
+}
+
+
+p {
+    font-size: $smaller-font;
+}
+li {
+    font-size: $smaller-font;
+
+}
+
+
 .fade {
     opacity: 0 !important;
 }

@@ -58,6 +58,7 @@ interface CarouselItemProperties {
     heading: string;
     subHeading: string;
     id: string;
+    children?: JSX.Element | JSX.Element[];
 }
 
 export default function CarouselItem(props: CarouselItemProperties) {
@@ -82,7 +83,8 @@ export default function CarouselItem(props: CarouselItemProperties) {
                 <p id={"carouselSubheading" + props.id}>{props.subHeading}</p>
             </div>
             <div id={"expandedInfo" + props.id} className="expanded-info hide">
-                <h3>{props.heading}</h3>
+                <h3 className="expandedInfoHeading">{props.heading}</h3>
+                {props.children}
             </div>
         </div>
     );

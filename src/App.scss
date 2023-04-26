@@ -19,27 +19,6 @@
     overflow-x: hidden;
 }
 
-h1 {
-    font-size: $large-font;
-}
-
-h2 {
-    font-size: $medium-font;
-}
-
-h3 {
-    font-size: $small-medium-font;
-}
-
-
-p {
-    font-size: $smaller-font;
-}
-li {
-    font-size: $smaller-font;
-
-}
-
 
 #scroll-button {
     z-index: 1;
@@ -75,7 +54,7 @@ li {
     .nav-item {
         transition: $hover-fade-time;
         // font-size: $item-font;
-        font-size: $smaller-font;
+        font-size: $small-font;
         color: $font-grey;
         // grid-row: 1;
         margin-left: auto;

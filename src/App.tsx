@@ -30,16 +30,16 @@ function App() {
             <div className="nav-bar">
                 <Logo className="logo" />
                 <a className="nav-item clickable" onClick={() => helpers.navigate("about")}>
-                    About
+                    <b>About</b>
                 </a>
                 <a className="nav-item clickable" onClick={() => helpers.navigate("experience")}>
-                    Work Experience
+                    <b>Work Experience</b>
                 </a>
                 <a className="nav-item clickable" onClick={() => helpers.navigate("")}>
-                    Resumé
+                    <b>Resumé</b>
                 </a>
                 <a className="nav-item clickable" onClick={() => helpers.navigate("footer")}>
-                    Contact
+                    <b>Contact</b>
                 </a>
                 {/* <hr id="indicator" className="nav-item white-highlight"></hr> */}
             </div>
@@ -56,12 +56,16 @@ function App() {
                 <div className="projects">
                     <h1>Projects</h1>
                     <Carousel>
-                        <CarouselItem
-                            backgroundImage={hacked_bck}
-                            heading="BeyondControl"
-                            subHeading="HackEd 2023"
-                            id="0"
-                        ></CarouselItem>
+                        <CarouselItem backgroundImage={hacked_bck} heading="BeyondControl" subHeading="HackEd 2023" id="0">
+                            <div>
+                                <h4>Description</h4>
+                                <p>
+                                    A guesture navigation system for windows written in <b>python</b> that utilizes <b>media pipe</b>{" "}
+                                    and <b>opencv</b>. A custom classifier using the library <b>keras</b> was trained on differnt
+                                    handsigns and then would associate them with the corresponding windows functions.
+                                </p>
+                            </div>
+                        </CarouselItem>
                         <CarouselItem
                             backgroundImage={shell_bck}
                             heading="Unix Shell in c++"
