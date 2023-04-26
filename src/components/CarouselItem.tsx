@@ -59,6 +59,7 @@ interface CarouselItemProperties {
     subHeading: string;
     id: string;
     children?: JSX.Element | JSX.Element[];
+    projectLink?: string;
 }
 
 export default function CarouselItem(props: CarouselItemProperties) {

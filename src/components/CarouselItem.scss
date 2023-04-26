@@ -59,13 +59,28 @@
     border: 10px solid white;
     display: grid;
     grid-template-rows: 15% 85%;
-    grid-template-columns: repeat(3, calc(85%/3));
-    
+    grid-template-columns: repeat(3, calc(81%/3));
+    column-gap: 2%;
+    row-gap: 2%;
     
     .expandedInfoHeading {
         text-align: center;
         grid-row: 1;
         grid-column: 1 /-1;
+    }
+
+    h4, p {
+        margin-top: 0;
+        margin-bottom: 5%;
+    }
+
+    p {
+        margin-left: 5%;
+    }
+
+    video, img {
+        grid-column: 1/3;
+        // padding-right: 20%;
     }
 
     transition: opacity 0.25s;

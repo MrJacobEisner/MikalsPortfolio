@@ -5,10 +5,13 @@ import { ReactComponent as GithubLogo } from "./images/github.svg";
 import { ReactComponent as EmailIcon } from "./images/email.svg";
 import { ReactComponent as ScrollIcon } from "./images/scroll.svg";
 import { ReactComponent as LinkedinIcon } from "./images/linkedin.svg";
+
 import tnm_bck from "./images/tnm.png";
 import ualberta_bck from "./images/ualberta.jpeg";
 import hacked_bck from "./images/HackEd.jpg";
 import shell_bck from "./images/shell.png";
+import hackEd from "./videos/hackEd.mp4";
+// import { ReactComponent as HackEd } from "./videos/hackEd.mp4";
 
 // components
 import Carousel from "./components/Carousel";
@@ -56,7 +59,16 @@ function App() {
                 <div className="projects">
                     <h1>Projects</h1>
                     <Carousel>
-                        <CarouselItem backgroundImage={hacked_bck} heading="BeyondControl" subHeading="HackEd 2023" id="0">
+                        <CarouselItem
+                            backgroundImage={hacked_bck}
+                            heading="BeyondControl"
+                            subHeading="HackEd 2023"
+                            id="0"
+                            projectLink="https://github.com/Kuiper-HackEd2023/BeyondControl-Kuiper"
+                        >
+                            <video width="100%" height="" controls>
+                                <source src={hackEd} type="video/mp4"></source>
+                            </video>
                             <div>
                                 <h4>Description</h4>
                                 <p>
