@@ -81,7 +81,7 @@ function App() {
                         <CarouselItem
                             backgroundImage={shell_bck}
                             heading="Unix Shell in c++"
-                            subHeading="CMPUT 379 class project"
+                            subHeading="Operating Systems Class Project"
                             projectLink="Due to university policy, source code can not be publicly hosted."
                             id="1"
                         ></CarouselItem>
