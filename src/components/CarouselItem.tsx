@@ -7,7 +7,6 @@ import * as helpers from "../helpers";
 
 function animateInfoIn(id: string) {
     let preview_info: HTMLElement | null = document.getElementById("previewInfo" + id);
-    let carousel_heading: HTMLElement | null = document.getElementById("carouselHeading" + id);
     let carousel_subheading: HTMLElement | null = document.getElementById("carouselSubheading" + id);
     let expanded_info: HTMLElement | null = document.getElementById("expandedInfo" + id);
     carousel_subheading?.classList.add("fade");
@@ -96,20 +95,13 @@ export default function CarouselItem(props: CarouselItemProperties) {
             </div>
             <div id={"expandedInfo" + props.id} className="expanded-info hide">
                 <h3 className="expanded-info-heading">{props.heading}</h3>
-                <CloseIcon className="expanded-info-close-icon clickable" onClick={() => animateInfoOut(props.id)} />
-                {media}
-                <div className="expanded-info-panel">
-                    {description}
-                    {/* <button
-                        className="carousel-item-button clickable"
-                        onClick={() => {
-                            helpers.openUrl(props.projectLink);
-                        }}
-                    >
-                        <GithubLogo className="gh-logo" />
-                        View Project Repo
-                    </button> */}
-                    {buildProjectLink(props.projectLink)}
+                <div id={"expandedFading" + props.id} className="expanded-fading">
+                    <CloseIcon className="expanded-info-close-icon clickable" onClick={() => animateInfoOut(props.id)} />
+                    {media}
+                    <div className="expanded-info-panel">
+                        {description}
+                        {buildProjectLink(props.projectLink)}
+                    </div>
                 </div>
             </div>
         </div>
