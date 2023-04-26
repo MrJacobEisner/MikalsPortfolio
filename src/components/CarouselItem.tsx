@@ -1,22 +1,13 @@
 import "./CarouselItem.scss";
+import { ReactComponent as GithubLogo } from "../images/github.svg";
 import React from "react";
+import * as helpers from "../helpers";
 
 function animateInfoIn(id: string) {
     let preview_info: HTMLElement | null = document.getElementById("previewInfo" + id);
     let carousel_heading: HTMLElement | null = document.getElementById("carouselHeading" + id);
     let carousel_subheading: HTMLElement | null = document.getElementById("carouselSubheading" + id);
     let expanded_info: HTMLElement | null = document.getElementById("expandedInfo" + id);
-    // let children: HTMLCollection | undefined = preview_info?.children;
-
-    // if (children) {
-    //     for (let i = 0; i < children.length; i++) {
-    //         let child: Element = children[i];
-    //         child.classList.add("fade");
-    //         setTimeout(() => {
-    //             child.classList.add("hide");
-    //         }, 250);
-    //     }
-    // }
     carousel_subheading?.classList.add("fade");
     preview_info?.classList.add("animate-info-forwards");
 
@@ -42,6 +33,8 @@ function animateInfoOut(id: string) {
     let expanded_info: HTMLElement | null = document.getElementById("expandedInfo" + id);
     let carousel_subheading: HTMLElement | null = document.getElementById("carouselSubheading" + id);
 
+    let info_content = expanded_info?.childNodes;
+
     expanded_info?.classList.add("animate-info-backwards");
 
     setTimeout(() => {
@@ -53,12 +46,32 @@ function animateInfoOut(id: string) {
     }, 500);
 }
 
+function buildProjectLink(project_link: string | undefined) {
+    if (!project_link) return <></>;
+
+    if (helpers.isURL(project_link)) {
+        return (
+            <button
+                className="carousel-item-button clickable"
+                onClick={() => {
+                    helpers.openUrl(project_link);
+                }}
+            >
+                <GithubLogo className="gh-logo" />
+                View Project Repo
+            </button>
+        );
+    }
+
+    return <p className="carousel-item-link-msg">{project_link}</p>;
+}
+
 interface CarouselItemProperties {
     backgroundImage: string;
     heading: string;
     subHeading: string;
     id: string;
-    children?: JSX.Element | JSX.Element[];
+    children?: JSX.Element[];
     projectLink?: string;
 }
 
@@ -70,6 +83,13 @@ export default function CarouselItem(props: CarouselItemProperties) {
 
     // do not hide the first item in the carousel
     let hidden: string = props.id === "0" ? "" : "hide fade";
+
+    let media: JSX.Element = <></>;
+    let description: JSX.Element = <></>;
+    if (props.children?.length === 2) {
+        media = props.children[0];
+        description = props.children[1];
+    }
 
     return (
         <div id={"carouselItem" + props.id} className={"carousel-item " + hidden} style={img_styles}>
@@ -84,8 +104,21 @@ export default function CarouselItem(props: CarouselItemProperties) {
                 <p id={"carouselSubheading" + props.id}>{props.subHeading}</p>
             </div>
             <div id={"expandedInfo" + props.id} className="expanded-info hide">
-                <h3 className="expandedInfoHeading">{props.heading}</h3>
-                {props.children}
+                <h3 className="expanded-info-heading">{props.heading}</h3>
+                {media}
+                <div className="expanded-info-panel">
+                    {description}
+                    {/* <button
+                        className="carousel-item-button clickable"
+                        onClick={() => {
+                            helpers.openUrl(props.projectLink);
+                        }}
+                    >
+                        <GithubLogo className="gh-logo" />
+                        View Project Repo
+                    </button> */}
+                    {buildProjectLink(props.projectLink)}
+                </div>
             </div>
         </div>
     );

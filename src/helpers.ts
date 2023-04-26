@@ -32,8 +32,10 @@ export function navigate(id: string){
 }
 
 
-export function openUrl(url: string){
-    window.open(url, "_blank")?.focus()
+export function openUrl(url: string | null){
+    if (url) window.open(url, "_blank")?.focus();
+    return;
+    
 }
 
 export function scrollButton() {
@@ -66,3 +68,9 @@ export function showNav() {
         // .classList.add("hidden");
     }
 }
+
+// from https://stackoverflow.com/a/49849482
+export function isURL(url: string) {
+    var res = url.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    return (res !== null)
+  };

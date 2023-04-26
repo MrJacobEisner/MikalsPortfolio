@@ -63,10 +63,10 @@ function App() {
                             backgroundImage={hacked_bck}
                             heading="BeyondControl"
                             subHeading="HackEd 2023"
-                            id="0"
                             projectLink="https://github.com/Kuiper-HackEd2023/BeyondControl-Kuiper"
+                            id="0"
                         >
-                            <video width="100%" height="" controls>
+                            <video controls>
                                 <source src={hackEd} type="video/mp4"></source>
                             </video>
                             <div>
@@ -82,6 +82,7 @@ function App() {
                             backgroundImage={shell_bck}
                             heading="Unix Shell in c++"
                             subHeading="CMPUT 379 class project"
+                            projectLink="Due to university policy, source code can not be publicly hosted."
                             id="1"
                         ></CarouselItem>
                         <CarouselItem backgroundImage={tnm_bck} heading="Test Item" subHeading="Used in testing" id="2"></CarouselItem>
