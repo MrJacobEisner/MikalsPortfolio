@@ -44,6 +44,7 @@ export default function Carousel(props: CauroselProperties) {
 
     return (
         <div className="carousel">
+            <div className="view">{props.children}</div>
             <div
                 id="L-panel"
                 className="blur-panels active clickable"
@@ -55,7 +56,6 @@ export default function Carousel(props: CauroselProperties) {
                 <ScrollIcon id="next-arrow" className="arrow"></ScrollIcon>
             </div>
             {/* <div className="indicators"></div> */}
-            <div className="view">{props.children}</div>
         </div>
     );
 }

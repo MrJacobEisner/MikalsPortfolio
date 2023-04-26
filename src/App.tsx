@@ -27,14 +27,6 @@ function App() {
                 helpers.scrollButton();
             }}
         >
-            {/* NAV BAR */}
-            <ScrollIcon
-                id="scroll-button"
-                className="fade"
-                onClick={() => {
-                    document.getElementsByClassName("nav-bar")[0].scrollIntoView({ behavior: "smooth" });
-                }}
-            />
             <div className="nav-bar">
                 <Logo className="logo" />
                 <a className="nav-item clickable" onClick={() => helpers.navigate("about")}>
@@ -165,6 +157,15 @@ function App() {
                     }}
                 />
             </div>
+
+            {/* render ontop of all */}
+            <ScrollIcon
+                id="scroll-button"
+                className="fade"
+                onClick={() => {
+                    document.getElementsByClassName("nav-bar")[0].scrollIntoView({ behavior: "smooth" });
+                }}
+            />
         </div>
     );
 }

@@ -22,8 +22,6 @@ function animateInfoIn(id: string) {
 
     // after animation is done, switch to the proper element
     setTimeout(() => {
-        carousel_subheading?.classList.add("hide");
-        carousel_heading?.classList.add("hide");
         expanded_info?.classList.remove("hide");
         preview_info?.classList.add("hide");
         preview_info?.classList.remove("animate-info-forwards");
@@ -42,19 +40,15 @@ function animateInfoIn(id: string) {
 function animateInfoOut(id: string) {
     let preview_info: HTMLElement | null = document.getElementById("previewInfo" + id);
     let expanded_info: HTMLElement | null = document.getElementById("expandedInfo" + id);
-    let children: HTMLCollection | undefined = preview_info?.children;
+    let carousel_subheading: HTMLElement | null = document.getElementById("carouselSubheading" + id);
+
     expanded_info?.classList.add("animate-info-backwards");
-    // expanded_info?.classList.add("fade");
+
     setTimeout(() => {
         preview_info?.classList.remove("hide");
         expanded_info?.classList.add("hide");
-        if (children) {
-            for (let i = 0; i < children.length; i++) {
-                let child: Element = children[i];
-                child.classList.remove("hide");
-                child.classList.remove("fade");
-            }
-        }
+        carousel_subheading?.classList.remove("fade");
+
         expanded_info?.classList.remove("animate-info-backwards");
     }, 500);
 }
