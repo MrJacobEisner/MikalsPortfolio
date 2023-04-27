@@ -85,7 +85,10 @@ $tnm-bck: "../images/tnm.png";
                 opacity: 0%;
                 transition: opacity 0.5s;
             }
-
+            
+            li {
+                margin-bottom: 2%;
+            }
             // font-size: 0;
         }
     }

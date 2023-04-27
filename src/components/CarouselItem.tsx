@@ -27,8 +27,12 @@ export function animateInfoOut(id: string) {
     let preview_info: HTMLElement | null = document.getElementById("previewInfo" + id);
     let expanded_info: HTMLElement | null = document.getElementById("expandedInfo" + id);
     let carousel_subheading: HTMLElement | null = document.getElementById("carouselSubheading" + id);
+    let expanded_content: HTMLElement | null = document.getElementById("expandedContent" + id);
 
-    expanded_info?.classList.add("animate-info-backwards");
+    expanded_content?.classList.add("fade");
+    setTimeout(() => {
+        expanded_info?.classList.add("animate-info-backwards");
+    }, 250);
 
     setTimeout(() => {
         preview_info?.classList.remove("hide");
@@ -36,7 +40,7 @@ export function animateInfoOut(id: string) {
         carousel_subheading?.classList.remove("fade");
 
         expanded_info?.classList.remove("animate-info-backwards");
-    }, 500);
+    }, 750);
 }
 
 function buildProjectLink(project_link: string | undefined) {
