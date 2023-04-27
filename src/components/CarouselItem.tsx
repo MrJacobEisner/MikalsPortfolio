@@ -20,7 +20,7 @@ function animateInfoIn(id: string) {
         preview_info?.classList.add("hide");
         preview_info?.classList.remove("animate-info-forwards");
         expanded_content?.classList.remove("fade");
-    }, 750);
+    }, 500);
 }
 
 export function animateInfoOut(id: string) {

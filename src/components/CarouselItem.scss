@@ -107,6 +107,7 @@ $preview-background: rgba(25, 25, 25, 0.9);
             grid-template-rows: 80% 20%;
             grid-template-columns: 100%;
             height: 85%;
+            overflow: hidden;
     
             h4, p {
                 // position: relative;
@@ -120,13 +121,21 @@ $preview-background: rgba(25, 25, 25, 0.9);
             }
     
             .carousel-item-link-msg {
+                // position: relative;
+                // bottom: 0;
+                margin-bottom: 0%;
+                // padding-bottom: 0;
                 grid-row: 2;
                 font-size: $smaller-font;
                 color: $font-grey;
+                width: fit-content;
+                height: fit-content;
+                align-self: flex-end;
             }
     
             .carousel-item-button {
                 grid-row: 2;
+                align-self: flex-end;
     
                 display: grid;
                 grid-template-rows: 100%;

@@ -10,7 +10,8 @@ import tnm_bck from "./images/tnm.png";
 import ualberta_bck from "./images/ualberta.jpeg";
 import hacked_bck from "./images/HackEd.jpg";
 import shell_bck from "./images/shell.png";
-import hackEd from "./videos/hackEd.mp4";
+import hackEd_video from "./videos/hackEd.mp4";
+import shell_video from "./videos/shell.mp4";
 // import { ReactComponent as HackEd } from "./videos/hackEd.mp4";
 
 // components
@@ -66,8 +67,8 @@ function App() {
                             projectLink="https://github.com/Kuiper-HackEd2023/BeyondControl-Kuiper"
                             id="0"
                         >
-                            <video controls>
-                                <source src={hackEd} type="video/mp4"></source>
+                            <video controls muted>
+                                <source src={hackEd_video} type="video/mp4"></source>
                             </video>
                             <div>
                                 <h4>Description</h4>
@@ -80,11 +81,28 @@ function App() {
                         </CarouselItem>
                         <CarouselItem
                             backgroundImage={shell_bck}
-                            heading="Unix Shell in c++"
+                            heading="Unix Shell"
                             subHeading="Operating Systems Class Project"
-                            projectLink="Due to university policy, source code can not be publicly hosted."
+                            projectLink="To view the source, please contact me."
                             id="1"
-                        ></CarouselItem>
+                        >
+                            <video controls>
+                                <source src={shell_video} type="video/mp4"></source>
+                            </video>
+                            <div>
+                                <h4>Description</h4>
+                                <p>
+                                    This shell, written in <b>C++</b>, utilized knowledge of processes (spawning, killing, suspending,
+                                    resuming) and maintaining each process' state in a custom <b>process table</b>. In addition, the
+                                    shell is capable of running processes in the background.
+                                </p>
+                                <p>
+                                    Other projects from this class include the
+                                    <b> producer-consumer problem</b> utilizing <b>threads</b> and <b>semaphores</b>, as well as a
+                                    modified version of the same problem using <b>sockets</b>.
+                                </p>
+                            </div>
+                        </CarouselItem>
                         <CarouselItem backgroundImage={tnm_bck} heading="Test Item" subHeading="Used in testing" id="2"></CarouselItem>
                     </Carousel>
                 </div>
