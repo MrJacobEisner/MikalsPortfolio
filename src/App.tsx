@@ -10,9 +10,10 @@ import tnm_bck from "./images/tnm.png";
 import ualberta_bck from "./images/ualberta.jpeg";
 import hacked_bck from "./images/HackEd.jpg";
 import shell_bck from "./images/shell.png";
+import interpreter_back from "./images/interpreter.png";
 import hackEd_video from "./videos/hackEd.mp4";
 import shell_video from "./videos/shell.mp4";
-// import { ReactComponent as HackEd } from "./videos/hackEd.mp4";
+import interpreter_video from "./videos/interpreter.mp4";
 
 // components
 import Carousel from "./components/Carousel";
@@ -53,8 +54,8 @@ function App() {
                     <h1>Hi! Im Mikal!</h1>
                     <p className="intro-p">
                         I am an honours CS student at the University of Alberta with a passion for any and all technology. Besides
-                        programming, I love listening to music, gaming, and working out. While primarily a back-end developer, I have
-                        experience in full-stack development.
+                        programing, I love listening to music, working out, and playing with my 2 cats and 1 dog. While primarily a
+                        back-end developer, I have experience in front-end design, and have built some apps as a full-stack dev.
                     </p>
                 </div>
                 <div className="projects">
@@ -86,7 +87,7 @@ function App() {
                             projectLink="To view the source, please contact me."
                             id="1"
                         >
-                            <video controls>
+                            <video controls muted>
                                 <source src={shell_video} type="video/mp4"></source>
                             </video>
                             <div>
@@ -103,7 +104,29 @@ function App() {
                                 </p>
                             </div>
                         </CarouselItem>
-                        <CarouselItem backgroundImage={tnm_bck} heading="Test Item" subHeading="Used in testing" id="2"></CarouselItem>
+                        {/* TODDO: re-record video and take bck to remove student id */}
+                        <CarouselItem
+                            backgroundImage={interpreter_back}
+                            heading="Functional Language Interpreter"
+                            subHeading="Non-procedural Programing Class Project"
+                            projectLink="To view the source, please contact me."
+                            id="2"
+                        >
+                            <video controls muted>
+                                <source src={interpreter_video} type="video/mp4"></source>
+                            </video>
+                            <div>
+                                <h4>Description</h4>
+                                <p>
+                                    An interpreter for a lisp-like functional laguage written in <b>lisp</b>. This interpreter uses{" "}
+                                    <b>applicative order reductions</b> and can handle <b>higher order</b> user-defined functions
+                                </p>
+                                <p>
+                                    Some other skills aquired include: <b>prolog</b>, <b>answer set programing</b>, and{" "}
+                                    <b>constraint logic programing</b>.
+                                </p>
+                            </div>
+                        </CarouselItem>
                     </Carousel>
                 </div>
                 <div id="experience" className="experience">
@@ -135,7 +158,7 @@ function App() {
                                 tools to help with internal development.
                             </p>
                         </div>
-
+                        {/* 
                         <div>
                             <h3>Projects:</h3>
                             <ul>
@@ -143,7 +166,7 @@ function App() {
                                     Cadmus - A headless or GUI based internal document generation system accessable through a REST API
                                 </li>
                             </ul>
-                        </div>
+                        </div> */}
                     </Card>
                     <Card
                         backgroundImage={ualberta_bck}
