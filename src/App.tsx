@@ -37,11 +37,11 @@ function App() {
                 <a className="nav-item clickable" onClick={() => helpers.navigate("about")}>
                     <b>About</b>
                 </a>
+                <a className="nav-item clickable" onClick={() => helpers.navigate("projects")}>
+                    <b>Projects</b>
+                </a>
                 <a className="nav-item clickable" onClick={() => helpers.navigate("experience")}>
                     <b>Work Experience</b>
-                </a>
-                <a className="nav-item clickable" onClick={() => helpers.navigate("")}>
-                    <b>Resumé</b>
                 </a>
                 <a className="nav-item clickable" onClick={() => helpers.navigate("footer")}>
                     <b>Contact</b>
@@ -58,7 +58,7 @@ function App() {
                         back-end developer, I have experience in front-end design, and have built some apps as a full-stack dev.
                     </p>
                 </div>
-                <div className="projects">
+                <div id="projects" className="projects">
                     <h1>Projects</h1>
                     <Carousel>
                         <CarouselItem
@@ -195,7 +195,7 @@ function App() {
                 </div>
             </main>
             {/* using a div instead of a footer bc of scrolling issue on mobile */}
-            <div className="footer">
+            <div id="footer" className="footer">
                 <GithubLogo
                     className="contact-logos clickable"
                     onClick={() => {
