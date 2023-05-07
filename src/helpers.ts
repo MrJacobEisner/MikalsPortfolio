@@ -1,5 +1,5 @@
 import "./App.scss"
-import "./globals"
+import React from "react";
 
 export function setup() {
     // Haneling if on moblie (init small window width)
@@ -11,9 +11,9 @@ export function setup() {
     }
 
     // changing the text of my thing
-    setInterval(() => {
-        changeText();
-    }, 5000);
+    // setInterval(() => {
+    //     changeText();
+    // }, 5000);
 
     window.addEventListener("resize", () => {
         if (window.innerWidth <= 500) {
@@ -31,38 +31,11 @@ export function navigate(id: string){
     document.getElementById(id)?.scrollIntoView({behavior: "smooth"});
 }
 
-export function changeText() {
-    let begining_greeting: HTMLElement | null = document.getElementById("beginingGreeting");
-    let ending_greeting: HTMLElement | null = document.getElementById("endingGreeting");
-    const greetings = [
-        [`std::cout << "`, `" << endl;`],
-        [`console.log("`, `");`],
-        [`echo '<p>`, `</p>';`],
-        [`print("`, `")`],
-        [`MsgBox("`, `")`],
-        // [`echo \ `, ``],
-    ];
-    let greeting_num: number = Math.floor(Math.random() * greetings.length);
-    let greeting: string[] = greetings[greeting_num];
 
-    begining_greeting?.classList.add("fade");
-    ending_greeting?.classList.add("fade");
-    
-    setTimeout(() => {
-        begining_greeting!.innerText = greeting[0];
-        ending_greeting!.innerText = greeting[1];
-        // begining_greeting!.innerHTML = greeting[0];
-        // ending_greeting!.innerHTML = greeting[1];
-        
-        begining_greeting?.classList.remove("fade");
-        ending_greeting?.classList.remove("fade");
-
-    }, 2500)
+export function openUrl(url: string | null){
+    if (url) window.open(url, "_blank")?.focus();
     return;
-}
-
-export function openUrl(url: string){
-    window.open(url, "_blank")?.focus()
+    
 }
 
 export function scrollButton() {
@@ -81,7 +54,7 @@ export function scrollButton() {
 export function hideNav() {
     let nav_items: HTMLCollectionOf<Element> = document.getElementsByClassName("nav-item");
     for (let i = 0; i < nav_items.length; i++) {
-        nav_items[i].classList.add("hidden");
+        nav_items[i].classList.add("hide");
     }
 }
 
@@ -89,9 +62,15 @@ export function showNav() {
     let nav_items: HTMLCollectionOf<Element> = document.getElementsByClassName("nav-item");
     for (let i = 0; i < nav_items.length; i++) {
         let nav_item = nav_items[i];
-        if (nav_item.classList.contains("hidden")) {
-            nav_item.classList.remove("hidden");
+        if (nav_item.classList.contains("hide")) {
+            nav_item.classList.remove("hide");
         }
         // .classList.add("hidden");
     }
 }
+
+// from https://stackoverflow.com/a/49849482
+export function isURL(url: string) {
+    var res = url.match(/(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g);
+    return (res !== null)
+  };

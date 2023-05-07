@@ -4,7 +4,18 @@
 
 @font-face {
   font-family: 'LeagueSpartan';
-  src: local('LeagueSpartan'), url('../public/LeagueSpartan-Bold.otf') format('opentype');
+  font-style: bold;
+  src: local('LeagueSpartan'), url('../public/LeagueSpartan-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'LeagueSpartan';
+  font-style: normal;
+  src: local('LeagueSpartan'), url('../public/LeagueSpartan-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'LeagueSpartan';
+  font-style: italic;
+  src: local('LeagueSpartan'), url('../public/LeagueSpartan-Thin.ttf') format('truetype');
 }
 
 

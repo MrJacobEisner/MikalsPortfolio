@@ -1,0 +1,94 @@
+@import "../variables.scss";
+@import "../globals.scss";
+
+.carousel {
+    display: grid;
+    grid-template-rows: 75vh;
+    grid-template-columns: 14fr 72fr 14fr;
+    width: 100%;
+    height: 75vh;
+    max-height: 75vh;
+    background-color: $darker-grey;
+    border-radius: 20px;
+    margin-bottom: 0px;
+    // align-items: center;
+    overflow: hidden;
+
+    .blur-panels {
+        height: 75vh;
+        width: 50%;
+        align-items: center;
+        justify-items: center;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        
+        background-color: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+
+        transition: width 0.25s;      
+    }
+
+    #L-panel {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    #R-panel {
+        justify-self: end;
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    .arrow {
+        fill: $font-dark-grey;
+    }
+
+
+    #back-arrow {
+        grid-column: 2;
+        grid-row: 1;
+
+        width: max(5%, 30px);
+        height: max(5%, 30px);
+        transform: rotate(-90deg);
+
+        transition: fill 0.5s;
+    }
+    #next-arrow {
+        grid-column: 2;
+
+        width: max(5%, 30px);
+        height: max(5%, 30px);
+        transform: rotate(90deg);
+
+        transition: fill 0.5s;
+    }
+    
+    .view {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row: 1;
+        height: 75vh;
+
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .active {
+        .arrow {
+            fill: $font-grey;
+        }
+        &:hover{
+            width: 100%;
+            #back-arrow {
+                fill: white;
+            }  
+            #next-arrow {
+                fill: white;
+            }  
+        } 
+    }
+}
